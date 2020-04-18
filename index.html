@@ -23,12 +23,13 @@
 			</div>
 		</div>
 		<div class="row-menu">
-			<a href="#">
-				<div class="all item">
-					<i class="fa fa-mobile" aria-hidden="true"></i>
-					ALL
-				</div>
+			<a href="#" class="drop-down">
+					<div class="all item">
+						<i class="fa fa-mobile" aria-hidden="true"></i>
+						ALL
+					</div>
 			</a>
+			
 			<a href="#">
 				<div class="apple item">
 					<i class="fa fa-mobile" aria-hidden="true"></i>
@@ -56,7 +57,69 @@
 		</div>
 	</div>
 	<div class="main">
-
+		<div class="slide-show">
+			
+			<img src="./css/image/SlideShow/slide_1.jpg" alt="Slide 1" class="slide-item">
+			<img src="./css/image/SlideShow/slide_2.jpg" alt="Slide 2" class="slide-item">
+			<img src="./css/image/SlideShow/slide_3.jpg" alt="Slide 3" class="slide-item">
+			<img src="./css/image/SlideShow/slide_4.jpg" alt="Slide 4" class="slide-item">
+			
+				<button class="left-btn" onclick="plusDivs(-1)">&#10094;</button>
+				
+				<button class="right-btn" onclick="plusDivs(1)">&#10095;</button>
+			
+			
+			
+		</div>
+		<p style="color: red; font: bold 2em Arial; text-align: center;">Hottest Product</p>
+		<div class="product">
+			<a href="#" class="product-item">
+				<div >
+					<div class="image"><img src=".\css\image\Product\Product_1.png" alt=""></div>
+					<div class="info">
+						<div class="name">iPhone 11 Pro Max 64GB</div>
+						<div class="price">39.999.000 VND</div>
+					</div>
+				</div>
+			</a>
+			
+			<a href="#" class="product-item">
+				<div >
+					<div class="image"><img src=".\css\image\Product\Product_2_SS_Galaxy S20 Ultra.png" alt=""></div>
+					<div class="info">
+						<div class="name">Samsung Galaxy S20 Ultra</div>
+						<div class="price">29.590.000 VND</div>
+					</div>
+				</div>
+			</a>
+			<a href="#" class="product-item">
+				<div >
+					<div class="image"><img src=".\css\image\Product\Product_3_Huawei P30 Pro.png" alt=""></div>
+					<div class="info">
+						<div class="name">Huawei P30 Pro</div>
+						<div class="price">14.990.000 VND</div>
+					</div>
+				</div>
+			</a>
+			<a href="#" class="product-item">
+				<div >
+					<div class="image"><img src=".\css\image\Product\Product_4_Samsung Galaxy Note 10+.png" alt=""></div>
+					<div class="info">
+						<div class="name">Samsung Galaxy Note 10+</div>
+						<div class="price">26.990.000 VND</div>
+					</div>
+				</div>
+			</a>
+			<a href="#" class="product-item">
+				<div >
+					<div class="image"><img src=".\css\image\Product\Product_5_OPPO Reno2 F.png" alt=""></div>
+					<div class="info">
+						<div class="name">OPPO Reno2 F</div>
+						<div class="price">7.980.000 VND</div>
+					</div>
+				</div>
+			</a>
+		</div>
 	</div>
 	<div class="footer">
 		<div class="col col-1">
@@ -76,5 +139,25 @@
 			</p>
 		</div>
 	</div>
+	<script>
+		var slideIndex = 1;
+		showDivs(slideIndex);
+		
+		function plusDivs(n) {
+		  showDivs(slideIndex += n);
+		}
+		
+		function showDivs(n) {
+		  var i;
+		  var x = document.getElementsByClassName("slide-item");
+		  if (n > x.length) {slideIndex = 1}
+		  if (n < 1) {slideIndex = x.length}
+		  for (i = 0; i < x.length; i++) {
+			x[i].style.opacity = "0";
+		  }
+		  
+		  x[slideIndex - 1].style.opacity = "1";
+		}
+		</script>
 </body>
 </html>
