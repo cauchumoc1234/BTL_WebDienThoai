@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer</title>
+    <link rel="stylesheet" href="./css/home.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="header">
+		<div class="top">
+			<div class="logo"></div>
+			<div class="search-box">
+				<input type="text" placeholder="Search...">
+				<button><i class="fa fa-search" aria-hidden="true"></i></button>
+			</div>
+			<div class="cart">
+				<a href="#"><i class="fa fa-cart-plus" aria-hidden="true"></i></a>
+			</div>
+		</div>
+		<div class="row-menu">
+			<a href="#">
+				<div class="all item">
+					<i class="fa fa-mobile" aria-hidden="true"></i>
+					ALL
+				</div>
+			</a>
+			<a href="#">
+				<div class="apple item">
+					<i class="fa fa-mobile" aria-hidden="true"></i>
+					APPLE
+				</div>
+			</a>
+			<a href="#">
+				<div class="samsung item">
+					<i class="fa fa-mobile" aria-hidden="true"></i>
+					SAMSUNG
+				</div>
+			</a>
+			<a href="#">
+				<div class="oppo item">
+					<i class="fa fa-mobile" aria-hidden="true"></i>
+					OPPO
+				</div>
+			</a>
+			<a href="#">
+				<div class="xiaomi item">
+					<i class="fa fa-mobile" aria-hidden="true"></i>
+					XIAOMI
+				</div>
+			</a>
+		</div>
+	</div>
+    <div class="cus-form">
+        <div class="register">
+            <h1>Register</h1>
+            <form action="#">
+                <label for="username">Username</label>
+                <input type="text" id="username" placeholder="abc...">
+                <label for="password">Password</label>
+                <input type="password" id="password">
+                <label for="numbers">Phone Numbers</label>
+                <input type="text" id="numbers" pattern="[0-9]{10,11}">
+                <button class="register-btn">Sign up</button>
+            </form>
+        </div>
+        <div class="login">
+            <h1>Sign in</h1>
+            <form action="#">
+                <label for="username">Username</label>
+                <input type="text" id="username" placeholder="abc...">
+                <label for="password">Password</label>
+                <input type="password" id="password">
+                <button class="login-btn">Log in</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        document.getElementById("numbers").addEventListener("invalid",warning)
+        function warning(){
+            alert("Wrong")
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+.header{
+    height: 130px;
+    margin: 0;
+    background-color: rgb(180, 21, 21);
+    display: flex;
+    flex-direction: column;
+}
+a{
+    display: block;
+    color: aliceblue;
+    text-decoration: none;
+}
+.top{
+    width: 100%;
+    flex-grow: 3;
+    display: flex;
+    
+}
+.top div{
+    height: 100%;
+}
+.logo{
+    flex-grow: 2;
+    background-image: url(./image/logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.search-box{
+    flex-grow: 5;
+    display: flex;
+    box-sizing: border-box;
+    padding: 20px;
+}
+.search-box input{
+    flex-grow: 7;
+    height: 80%;
+    padding-left: 2%;
+    border-radius: 8px;
+    border-width: 0;
+}
+.search-box button{
+    flex-grow: 1;
+    border-radius: 8px;
+    height: 80%;
+    background-color: rgb(221, 88, 88);
+    color: aliceblue;
+    border-width: 0;
+}
+
+.cart{
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4em;
+}
+.row-menu{
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content:space-around
+}
+.row-menu a{
+    flex-grow: 1;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(124, 15, 15);
+    transition: background-color 0.25s;
+}
+.row-menu a:hover{
+    background-color: rgb(255, 0, 106);
+}
+.row-menu a .item{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    flex-grow: 1;
+}
