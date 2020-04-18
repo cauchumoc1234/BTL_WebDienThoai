@@ -30,13 +30,13 @@ form{
     width: 50%;
     justify-content: center;
 }
-input{
+.cus-form input{
     height: 40px;
     border-radius: 8px;
     padding-left: 5%;
     font-size: 25px;
     border: 0;
-    background-color: rgb(222, 185, 233);
+    background-color: rgb(238, 207, 227);
 }
 form button{
     margin-top: 20px;
