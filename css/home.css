@@ -56,6 +56,9 @@ a{
     font-size: 20px;
     box-sizing: border-box;
 }
+button{
+    outline:none;
+}
 .search-box button{
     flex-grow: 1;
     border-radius: 0px 8px 8px 0px;
@@ -63,6 +66,7 @@ a{
     background-color: rgb(221, 88, 88);
     color: aliceblue;
     border-width: 0;
+    
 }
 .customer{
     flex-grow: 0.2;
@@ -90,14 +94,16 @@ a{
     background-color: rgb(209, 28, 28);
     height: 25px;
     transition: background-color 0.2s;
+    border-bottom: 1px solid rgb(243, 131, 131);
 }
-.row-menu ul li a{
+.item a{
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
-    color: black;
-    font-size: 20px;
+    color: rgb(253, 216, 4);
+    
+    font-size: 18px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
 }
@@ -136,8 +142,6 @@ a{
     transition: opacity 0.2s;
     flex-grow: 5;
 }
-
-
 .slide-show button{
     flex-grow: 1;
     border-radius: 50%;
@@ -159,7 +163,7 @@ a{
 .slide-show .left-btn{
     left: 0;
 }
-.product{
+.products{
     width: 80%;
     height: 50%;
     display: flex;
@@ -170,18 +174,21 @@ a{
     background-color: aliceblue;
 }
 .product-item{
-    width: 18%;
+    width: 20%;
     height: 100%;
     padding: 0;
     box-sizing: border-box;
     transition-property: width,background-color,font-size;
     transition-duration: 0.2s;
     padding: 2% 2%;
+    
 }
 .product-item:hover{
     height: 100%;
     font-size: 16px;
     background-color: rgb(230, 235, 238);
+    box-shadow: 5px 5px rgb(92, 87, 87);
+    z-index: 10;
     
 }
 .product-item .info{
@@ -193,18 +200,46 @@ a{
 .product-item .image{
     width: 100%;
     height: 100%;
-
+    position: relative;
 }
+.overlay{
+    height: 100%;
+    width: 100%;
+    background: radial-gradient(circle, rgba(0,0,0,0.2) 0%, rgba(0,0,0,1) 100%);
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.5s;
+}
+.overlay .add-to-cart{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    border: none;
+    background-color: orange;
+    opacity: 1;
+    color: aliceblue;
+    font-size: 20px;
+}
+.product-item:hover .overlay{
+    opacity: 1;
+}
+
 .image img{
     width: 100%;
     height: 100%;
 }
+
 .footer{
     display: flex;
     width: 100%;
     height: 180px;
     background-color: rgb(116, 133, 133);
     box-sizing: border-box;
+    margin-top: 100px;
     padding: 3% 5%;
 }
 .footer .col{
@@ -212,4 +247,3 @@ a{
     font: 1em/1.2 Arial ;
     color: aqua;
 }
-
