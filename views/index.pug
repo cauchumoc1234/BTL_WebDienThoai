@@ -1,0 +1,138 @@
+doctype html
+head
+  meta(charset='utf-8')
+  meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+  title Trang ch&#x1EE7;
+  link(rel='stylesheet', href='/css/home.css')
+  link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
+.header
+  .top
+    a.home(href='index.html')
+      .logo
+    .search-box
+      input(type='text', placeholder='Search...')
+      button
+        i.fa.fa-search(aria-hidden='true')
+    .customer
+      a(href='login_form.html') Sign in
+      | /
+      a(href='#') Sign up
+    .cart
+      a(href='login_form.html')
+        i.fa.fa-cart-plus(aria-hidden='true')
+  .row-menu
+    ul
+      li.item.drop
+        a(href='#')
+          i.fa.fa-mobile(aria-hidden='true')
+          | ALL
+        ul.sub-menu
+          li.item
+            a(href='#') APPLE
+          li.item
+            a(href='#') SAMSUNG
+          li.item
+            a(href='#') HUAWEI
+          li.item
+            a(href='#') OPPO
+          li.item
+            a(href='#') XIAOMI
+          li.item
+            a(href='#') VSMART
+      li.item
+        a(href='#')
+          i.fa.fa-apple(aria-hidden='true')
+          | APPLE
+      li.item
+        a(href='#')
+          i.fa.fa-mobile(aria-hidden='true')
+          |  SAMSUNG
+      li.item
+        a(href='#')
+          i.fa.fa-mobile(aria-hidden='true')
+          | XIAOMI
+      li.item
+        a(href='#')
+          i.fa.fa-mobile(aria-hidden='true')
+          | OPPO
+.main
+  .slide-show
+    img.slide-item(src='/image/SlideShow/slide_1.jpg', alt='Slide 1')
+    img.slide-item(src='/image/SlideShow/slide_2.jpg', alt='Slide 2')
+    img.slide-item(src='/image/SlideShow/slide_3.jpg', alt='Slide 3')
+    img.slide-item(src='/image/SlideShow/slide_4.jpg', alt='Slide 4')
+    button.left-btn(onclick='plusDivs(-1)') &#x276E;
+    button.right-btn(onclick='plusDivs(1)') &#x276F;
+  p(style='color: red; font: bold 2em Arial; text-align: center;') Hottest Product
+  .products
+    a.product-item(href='#')
+      div
+        .image
+          img(src='image/Product/Product_1.png', alt='')
+          .overlay
+            button.add-to-cart
+              i.fa.fa-cart-plus(aria-hidden='true')
+        .info
+          .name iPhone 11 Pro Max 64GB
+          .price 39.999.000 VND
+    a.product-item(href='#')
+      div
+        .image
+          img(src='image/Product/Product_2_SS_Galaxy S20 Ultra.png', alt='')
+          .overlay
+            button.add-to-cart
+              i.fa.fa-cart-plus(aria-hidden='true')
+        .info
+          .name Samsung Galaxy S20 Ultra
+          .price 29.590.000 VND
+    a.product-item(href='#')
+      div
+        .image
+          img(src='image/Product/Product_3_Huawei P30 Pro.png', alt='')
+          .overlay
+            button.add-to-cart
+              i.fa.fa-cart-plus(aria-hidden='true')
+        .info
+          .name Huawei P30 Pro
+          .price 14.990.000 VND
+    a.product-item(href='#')
+      div
+        .image
+          img(src='image/Product/Product_4_Samsung Galaxy Note 10+.png', alt='')
+          .overlay
+            button.add-to-cart
+              i.fa.fa-cart-plus(aria-hidden='true')
+        .info
+          .name Samsung Galaxy Note 10+
+          .price 26.990.000 VND
+    a.product-item(href='#')
+      div
+        .image
+          img(src='image/Product/Product_5_OPPO Reno2 F.png', alt='')
+          .overlay
+            button.add-to-cart
+              i.fa.fa-cart-plus(aria-hidden='true')
+        .info
+          .name OPPO Reno2 F
+          .price 7.980.000 VND
+.footer
+  .col.col-1
+    p
+      a(href='#') About us
+    p
+      a(href='#') C&acirc;u h&#x1ECF;i th&#x1B0;&#x1EDD;ng g&#x1EB7;p
+    p
+      a(href='#') Tra c&#x1EE9;u th&ocirc;ng tin b&#x1EA3;o h&agrave;nh
+  .col.col-2
+    p
+      a(href='#') Tin khuy&#x1EBF;n m&atilde;i
+    p
+      a(href='#') H&#x1B0;&#x1EDB;ng d&#x1EAB;n mua online
+    p
+      a(href='#') H&#x1B0;&#x1EDB;ng d&#x1EAB;n mua tr&#x1EA3; g&oacute;p
+  .col.col-3
+    p T&#x1B0; v&#x1EA5;n mua h&agrave;ng
+    p 1800 1800
+    p
+      | &Dstrok;&#x1ECB;a ch&#x1EC9;: Nh&agrave; b&aacute;o t&#x1EA1;i gia - &abreve;n r&#x1ED3;i b&aacute;o cha b&aacute;o m&#x1EB9;
+script(src='/js/main.js')
