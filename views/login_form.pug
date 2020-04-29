@@ -1,0 +1,78 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport', content='width=device-width, initial-scale=1.0')
+  title Customer
+  link(rel='stylesheet', href='./css/home.css')
+  link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
+  link(rel='stylesheet', href='./css/login.css')
+.header
+  .top
+    a.home(href='index.html')
+      .logo
+    .search-box
+      input(type='text', placeholder='Search...')
+      button
+        i.fa.fa-search(aria-hidden='true')
+    .customer
+      a(href='login_form.html') Sign in
+      | /
+      a(href='#') Sign up
+    .cart
+      a(href='#')
+        i.fa.fa-cart-plus(aria-hidden='true')
+  .row-menu
+    ul
+      li.item.drop
+        a(href='#')
+          i.fa.fa-mobile(aria-hidden='true')
+          |  ALL
+        ul.sub-menu
+          li.item
+            a(href='#') APPLE
+          li.item
+            a(href='#') APPLE
+          li.item
+            a(href='#') APPLE
+          li.item
+            a(href='#') APPLE
+          li.item
+            a(href='#') APPLE
+          li.item
+            a(href='#') APPLE
+      li.item
+        a(href='#')
+          i.fa.fa-apple(aria-hidden='true')
+          | APPLE
+      li.item
+        a(href='#')
+          i.fa.fa-mobile(aria-hidden='true')
+          |  SAMSUNG
+      li.item
+        a(href='#')
+          i.fa.fa-mobile(aria-hidden='true')
+          | XIAOMI
+      li.item
+        a(href='#')
+          i.fa.fa-mobile(aria-hidden='true')
+          | OPPO
+.cus-form
+  .register
+    h1 Register
+    form(action='#')
+      label(for='username') Username
+      input#username(type='text', placeholder='abc...')
+      label(for='password') Password
+      input#password(type='password')
+      label(for='numbers') Phone Numbers
+      input#numbers(type='text', pattern='[0-9]{10,11}')
+      button.register-btn Sign up
+  .login
+    h1 Sign in
+    form(action='#')
+      label(for='username') Username
+      input#username(type='text', placeholder='abc...')
+      label(for='password') Password
+      input#password(type='password')
+      button.login-btn Log in
+script(src='./js/login.js')

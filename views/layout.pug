@@ -1,0 +1,59 @@
+doctype html
+head
+  meta(charset='utf-8')
+  meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+  title Trang ch&#x1EE7;
+  link(rel='stylesheet', href='/css/home.css')
+  link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
+  block css
+.header
+  .top
+    a.home(href='index.html')
+      .logo
+    .search-box
+      input(type='text', placeholder='Search...')
+      button
+        i.fa.fa-search(aria-hidden='true')
+    .customer
+      a(href='/login') Sign in
+      | /
+      a(href='#') Sign up
+    .cart
+      a(href='/login')
+        i.fa.fa-cart-plus(aria-hidden='true')
+  .row-menu
+    ul
+      li.item.drop
+        a(href='#')
+          i.fa.fa-mobile(aria-hidden='true')
+          | ALL
+        ul.sub-menu
+          li.item
+            a(href='#') APPLE
+          li.item
+            a(href='#') SAMSUNG
+          li.item
+            a(href='#') HUAWEI
+          li.item
+            a(href='#') OPPO
+          li.item
+            a(href='#') XIAOMI
+          li.item
+            a(href='#') VSMART
+      li.item
+        a(href='#')
+          i.fa.fa-apple(aria-hidden='true')
+          | APPLE
+      li.item
+        a(href='#')
+          i.fa.fa-mobile(aria-hidden='true')
+          |  SAMSUNG
+      li.item
+        a(href='#')
+          i.fa.fa-mobile(aria-hidden='true')
+          | XIAOMI
+      li.item
+        a(href='#')
+          i.fa.fa-mobile(aria-hidden='true')
+          | OPPO
+block main

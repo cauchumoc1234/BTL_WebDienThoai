@@ -3,6 +3,7 @@ const app = express()
 const mysql = require('mysql')
 const bodyParser = require('body-parser')
 const port = 3000
+const login_router = require('./routes/login.router')
 app.listen(port,()=>console.log("Server is running at port",port))
 app.use([
     bodyParser.json(),
@@ -13,6 +14,7 @@ app.use([
 app.use(express.static("public"));
 app.set('view engine', 'pug');
 app.set('views','./views');
+
 var connection = mysql.createConnection({
     host:'localhost',
     user:'root',
@@ -32,6 +34,7 @@ connection.connect((err)=>{
         //console.log(res);
     })
 })
+app.use('/login',login_router)
 app.get('/',(req,res)=>{
     res.render('index')
     console.log("succees");
