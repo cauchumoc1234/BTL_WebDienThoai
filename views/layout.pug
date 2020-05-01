@@ -8,10 +8,10 @@ head
   block css
 .header
   .top
-    a.home(href='index.html')
+    a.home(href='/home')
       .logo
-    .search-box
-      input(type='text', placeholder='Search...')
+    form(action="/search" , method="get").search-box
+      input(type='text', placeholder='Search...',name="q")
       button
         i.fa.fa-search(aria-hidden='true')
     .customer
@@ -57,3 +57,24 @@ head
           i.fa.fa-mobile(aria-hidden='true')
           | OPPO
 block main
+.footer
+  .col.col-1
+    p
+      a(href='#') About us
+    p
+      a(href='#') C&acirc;u h&#x1ECF;i th&#x1B0;&#x1EDD;ng g&#x1EB7;p
+    p
+      a(href='#') Tra c&#x1EE9;u th&ocirc;ng tin b&#x1EA3;o h&agrave;nh
+  .col.col-2
+    p
+      a(href='#') Tin khuy&#x1EBF;n m&atilde;i
+    p
+      a(href='#') H&#x1B0;&#x1EDB;ng d&#x1EAB;n mua online
+    p
+      a(href='#') H&#x1B0;&#x1EDB;ng d&#x1EAB;n mua tr&#x1EA3; g&oacute;p
+  .col.col-3
+    p T&#x1B0; v&#x1EA5;n mua h&agrave;ng
+    p 1800 1800
+    p
+      | &Dstrok;&#x1ECB;a ch&#x1EC9;: Nh&agrave; b&aacute;o t&#x1EA1;i gia - &abreve;n r&#x1ED3;i b&aacute;o cha b&aacute;o m&#x1EB9;
+block script
