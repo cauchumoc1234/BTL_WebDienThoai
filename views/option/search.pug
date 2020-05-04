@@ -1,11 +1,12 @@
 extends ../layout
 block main
-   .products 
+   p(style="color:red;font-size:30px;text-align:center;font-weight:bold") Results for "#{searchFor}"
+   .products.products-search 
         each product in products
             a.product-item(href='#')
                 div
                     .image
-                        img(src='image/Product/Product_1.png', alt='')
+                        img(src='image/Product/id_'+product.productID+'.png', alt='')
                         .overlay
                             button.add-to-cart
                                 i.fa.fa-cart-plus(aria-hidden='true')

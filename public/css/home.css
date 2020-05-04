@@ -165,9 +165,9 @@ button{
 }
 .products{
     width: 80%;
-    height: 50%;
+    height: 400px;
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
     margin: auto;
     box-sizing: border-box;
     margin-bottom: 20px;
@@ -175,32 +175,33 @@ button{
 }
 .product-item{
     width: 20%;
-    height: 100%;
+    height: 400px;
     padding: 0;
     box-sizing: border-box;
     transition-property: width,background-color,font-size;
     transition-duration: 0.2s;
     padding: 2% 2%;
-    
 }
 .product-item:hover{
-    height: 100%;
-    font-size: 16px;
     background-color: rgb(230, 235, 238);
     box-shadow: 1px 1px 4px rgb(92, 87, 87);
     z-index: 10;
-    
 }
 .product-item .info{
     color: rgb(117, 126, 134);
     text-align: center;
     line-height: 1.5;
-    
+}
+.product-item:hover .info{
+    color: goldenrod;
 }
 .product-item .image{
     width: 100%;
     height: 100%;
     position: relative;
+}
+.products-search{
+    height: 1600px;
 }
 .overlay{
     height: 100%;

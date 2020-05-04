@@ -27,7 +27,12 @@ app.get('/',(req,res)=>{
 })
 app.use('/login',login_router)
 app.get('/home',(req,res)=>{
-    res.render('index')
-    console.log("succees");
+  var x= connection.query("SELECT * FROM `products` ORDER BY `quantityInStock` ASC LIMIT 5",function(err,result){
+    if(err) throw err
+    res.render('index',{
+      hots: result
+    })
+  })
+    
 })
 app.get('/search',product_controller.search)

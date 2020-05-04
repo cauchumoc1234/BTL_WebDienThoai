@@ -10,55 +10,16 @@ block main
             button.right-btn(onclick='plusDivs(1)') &#x276F;
         p(style='color: red; font: bold 2em Arial; text-align: center;') Hottest Product
         .products
-            a.product-item(href='#')
-                div
-                    .image
-                        img(src='image/Product/Product_1.png', alt='')
-                        .overlay
-                            button.add-to-cart
-                                i.fa.fa-cart-plus(aria-hidden='true')
-                    .info
-                        .name iPhone 11 Pro Max 64GB
-                        .price 39.999.000 VND
-            a.product-item(href='#')
-                div
-                    .image
-                        img(src='image/Product/Product_2_SS_Galaxy S20 Ultra.png', alt='')
-                        .overlay
-                            button.add-to-cart
-                                i.fa.fa-cart-plus(aria-hidden='true')
-                    .info
-                        .name Samsung Galaxy S20 Ultra
-                        .price 29.590.000 VND
+          each product in hots
             a.product-item(href='#')
               div
                 .image
-                  img(src='image/Product/Product_3_Huawei P30 Pro.png', alt='')
+                  img(src='image/Product/id_'+product.productID+".png", alt='product')
                   .overlay
-                    button.add-to-cart
-                      i.fa.fa-cart-plus(aria-hidden='true')
+                       button.add-to-cart
+                         i.fa.fa-cart-plus(aria-hidden='true')
                 .info
-                  .name Huawei P30 Pro
-                  .price 14.990.000 VND
-            a.product-item(href='#')
-              div
-                .image
-                  img(src='image/Product/Product_4_Samsung Galaxy Note 10+.png', alt='')
-                  .overlay
-                    button.add-to-cart
-                      i.fa.fa-cart-plus(aria-hidden='true')
-                .info
-                  .name Samsung Galaxy Note 10+
-                  .price 26.990.000 VND
-            a.product-item(href='#')
-              div
-                .image
-                  img(src='image/Product/Product_5_OPPO Reno2 F.png', alt='')
-                  .overlay
-                    button.add-to-cart
-                      i.fa.fa-cart-plus(aria-hidden='true')
-                .info
-                  .name OPPO Reno2 F
-                  .price 7.980.000 VND
+                  .name=product.productName
+                  .price= product.buyPrice
 block script
     script(src='/js/main.js')
