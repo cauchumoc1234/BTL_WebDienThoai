@@ -18,7 +18,11 @@ body{
 }
 a{
     display: block;
-    color: aliceblue;
+    color: rgb(211, 241, 217);
+    text-decoration: none;
+}
+a:hover{
+    color: rgb(132, 197, 124);
     text-decoration: none;
 }
 .top{
@@ -57,7 +61,7 @@ a{
     box-sizing: border-box;
 }
 button{
-    outline:none;
+    outline:none !important;
 }
 .search-box button{
     flex-grow: 1;
@@ -92,9 +96,10 @@ button{
 .item{
     flex-grow: 1;
     background-color: rgb(209, 28, 28);
-    height: 25px;
+    height: 35px;
     transition: background-color 0.2s;
-    border-bottom: 1px solid rgb(243, 131, 131);
+    border-bottom: 1px solid rgb(228, 61, 61);
+    border-left: 1px solid rgb(236, 53, 53);
 }
 .item a{
     display: flex;
@@ -201,7 +206,7 @@ button{
     position: relative;
 }
 .products-search{
-    height: 1600px;
+    height: 3500px;
 }
 .overlay{
     height: 100%;
@@ -235,16 +240,8 @@ button{
 }
 
 .footer{
-    display: flex;
-    width: 100%;
-    height: 180px;
     background-color: rgb(116, 133, 133);
     box-sizing: border-box;
-    margin-top: 100px;
-    padding: 3% 5%;
-}
-.footer .col{
-    flex-grow: 1;
-    font: 1em/1.2 Arial ;
-    color: aqua;
+    margin-top: 50px;
+    padding: 3% 2%;
 }

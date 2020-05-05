@@ -1,4 +1,6 @@
 extends layout
+block title
+  title Customer
 block css
   link(rel='stylesheet', href='/css/login.css')
 block main
@@ -21,4 +23,4 @@ block main
         label(for='password') Password
         input#password(type='password')
         button.login-btn Log in
-  //script(src='./js/login.js')
+  script(src='./js/login.js')

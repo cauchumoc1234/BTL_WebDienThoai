@@ -1,4 +1,6 @@
 extends layout
+block title
+  title Home
 block main
     .main
         .slide-show
@@ -20,6 +22,7 @@ block main
                          i.fa.fa-cart-plus(aria-hidden='true')
                 .info
                   .name=product.productName
-                  .price= product.buyPrice
+                  .screen Screen: #{product.productScreen}
+                  .price Price: #{product.buyPrice} M
 block script
     script(src='/js/main.js')
