@@ -4,6 +4,7 @@ const bodyParser = require('body-parser')
 const port = 3000
 const login_router = require('./routes/login.router')
 const product_controller = require('./controller/product.controller')
+const product_view = require('./routes/product_view.router')
 var connection = require('./db');
 app.listen(port,()=>console.log("Server is running at port",port))
 app.use([
@@ -26,6 +27,7 @@ app.get('/',(req,res)=>{
   res.redirect('/home')
 })
 app.use('/customer',login_router)
+app.use('/product',product_view);
 app.get('/home',(req,res)=>{
   var x= connection.query("SELECT * FROM `products` ORDER BY `quantityInStock` ASC LIMIT 5",function(err,result){
     if(err) throw err

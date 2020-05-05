@@ -1,0 +1,19 @@
+.product_info{
+    height: 100%;
+    border: 1px solid rgb(134, 185, 209);
+    background-color: rgb(220, 224, 228);
+    border-radius: 14px;
+}
+.detail{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-left: 5%;
+    padding-top: 5%;
+    background-color: rgb(227, 240, 252);
+    border-radius: 14px;
+}
+.col-sm-6 img{
+    display: block;
+    width: 100%;
+}

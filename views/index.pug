@@ -13,7 +13,7 @@ block main
         p(style='color: red; font: bold 2em Arial; text-align: center;') Hottest Product
         .products
           each product in hots
-            a.product-item(href='#')
+            a.product-item(href='/product/'+product.productID)
               div
                 .image
                   img(src='image/Product/id_'+product.productID+".png", alt='product')

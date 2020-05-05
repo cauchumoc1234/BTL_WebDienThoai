@@ -1,0 +1,23 @@
+extends layout
+block title
+  title Product
+block css
+  link(rel='stylesheet', href='/css/product_info.css')
+block main
+  div.product_info.container.mt-3
+    .row
+      .col-sm-6.mt-3.mb-3
+          img.rounded(src='/image/Product/id_'+ product.productID+".png", alt=product.productID)
+      .col-sm-6
+        .detail.mt-3.mb-3(style="color:grey")
+            p Name: #{product.productName}
+            p Brand: #{product.productBrand}
+            p Screen: #{product.productScreen}
+            p CPU: #{product.productCPU}
+            p RAM: #{product.productRAM} GB
+            p ROM: #{product.productROM} GB
+            p OS: #{product.productOS}
+            p Battery: #{product.productBattery} mAh
+            p Main Camera: #{product.mainCamera}
+            p Second Camera: #{product.secondCamera}
+    

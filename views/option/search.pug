@@ -5,7 +5,7 @@ block main
    p.alert.alert-success.mt-3.mx-auto(style="color:red;font-size:30px;text-align:center;font-weight:bold") Results for "#{searchFor}"
    .products.products-search 
         each product in products
-            a.product-item(href='#')
+            a.product-item(href='/product/'+product.productID)
                 div
                     .image
                         img(src='image/Product/id_'+product.productID+'.png', alt='')
