@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 const bodyParser = require('body-parser')
 const port = 3000
-const login_router = require('./public/js/routes/login.router')
+const login_router = require('./routes/login.router')
 const product_controller = require('./controller/product.controller')
 var connection = require('./db');
 app.listen(port,()=>console.log("Server is running at port",port))
@@ -25,7 +25,7 @@ connection.connect((err)=>{
 app.get('/',(req,res)=>{
   res.redirect('/home')
 })
-app.use('/login',login_router)
+app.use('/customer',login_router)
 app.get('/home',(req,res)=>{
   var x= connection.query("SELECT * FROM `products` ORDER BY `quantityInStock` ASC LIMIT 5",function(err,result){
     if(err) throw err
