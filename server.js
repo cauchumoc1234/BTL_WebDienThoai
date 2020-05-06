@@ -6,6 +6,8 @@ const customer_router = require('./routes/customer.router')
 const product_controller = require('./controller/product.controller')
 const product_view = require('./routes/product_view.router')
 var connection = require('./db');
+var cookieParser = require('cookie-parser')
+app.use(cookieParser())
 app.listen(port,()=>console.log("Server is running at port",port))
 app.use([
     bodyParser.json(),
@@ -35,6 +37,5 @@ app.get('/home',(req,res)=>{
       hots: result
     })
   })
-    
 })
 app.get('/search',product_controller.search)

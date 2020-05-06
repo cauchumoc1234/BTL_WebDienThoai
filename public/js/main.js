@@ -7,6 +7,7 @@ var slideIndex = 1;
 		}
 		
 		function showDivs(n) {
+		  
 		  var i;
 		  var x = document.getElementsByClassName("slide-item");
 		  if (n > x.length) {slideIndex = 1}

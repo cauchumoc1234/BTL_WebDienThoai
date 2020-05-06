@@ -48,6 +48,9 @@ body{
     color: aliceblue;
     transition: background-color 0.2s;
 }
+.register{
+    margin-top: 200px;
+}
 .register-btn{
     background-color: rgb(51, 74, 173);
 }

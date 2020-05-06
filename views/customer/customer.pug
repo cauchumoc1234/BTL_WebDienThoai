@@ -21,10 +21,12 @@ block main
         button.register-btn Sign up
     .login
       h1 Sign in
+      if errors
+          .alert.alert-danger= errors
       form(action='/customer/login',method="post")
         label(for='username') Username
         input#username(type='text', placeholder='abc...',name="username")
         label(for='password') Password
         input#password(type='password',name="password")
         button.login-btn Log in
-  script(src='./js/login.js')
+  script(src='/public/js/login.js')

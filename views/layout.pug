@@ -17,9 +17,9 @@ head
       button
         i.fa.fa-search(aria-hidden='true')
     .customer
-      a(href='/customer') Sign in
-      | /
-      a(href='/customer') Sign up
+        a(href='/customer') Sign in
+        | /
+        a(href='/customer') Sign up
     .cart
       a(href='/cart')
         i.fa.fa-cart-plus(aria-hidden='true')
@@ -84,3 +84,8 @@ block main
       p
         | Địa chỉ: 88 Lò Đúc,Hai Bà Trưng,Hà Nội
 block script
+script.
+  if(document.cookie){
+  var x = document.getElementsByClassName("customer");
+  x[0].innerHTML = "<a href='/customer/profile'>Profile</a>";
+  }
