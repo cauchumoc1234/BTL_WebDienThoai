@@ -1,0 +1,30 @@
+extends ../layout
+block title
+  title Customer
+block css
+  link(rel='stylesheet', href='/css/login.css')
+block main
+  .cus-form
+    .register
+      h1 Register
+      form(action='/customer/create',method="post")
+        label(for='username') Username
+        input#username(type='text', placeholder='abc...',name="username", pattern='[A-Za-z0-9]{1,20}')
+        label(for='password') Password
+        input#password(type='password',name="password", pattern='[A-Za-z0-9]{6,20}')
+        label(for='numbers') Phone Numbers
+        input#numbers(type='text', pattern='[0-9]{10,11}',name="phonenumbers",placeholder="eg:0335229871")
+        label(for='fullname') Full name
+        input#fullname(type='text',name='fullname',placeholder="eg:Joaquin Phoenix")
+        label(for='address') Address
+        input#address(type='text',name='address',placeholder="eg:Thanh Hà-Hải Dương")
+        button.register-btn Sign up
+    .login
+      h1 Sign in
+      form(action='/customer/login',method="post")
+        label(for='username') Username
+        input#username(type='text', placeholder='abc...',name="username")
+        label(for='password') Password
+        input#password(type='password',name="password")
+        button.login-btn Log in
+  script(src='./js/login.js')

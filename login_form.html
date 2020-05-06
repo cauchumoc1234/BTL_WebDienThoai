@@ -50,11 +50,15 @@
             <h1>Register</h1>
             <form action="#">
                 <label for="username">Username</label>
-                <input type="text" id="username" placeholder="abc...">
+                <input type="text" id="username" placeholder="abc..." pattern="[A-Za-z0-9]{1,20}">
                 <label for="password">Password</label>
-                <input type="password" id="password">
+                <input type="password" id="password" pattern="[A-Za-z0-9]{1,20}">
+                <label for="fullname">Full name</label>
+                <input type="text" id="fullname" pattern="[A-Za-z0-9]{1,20}">
                 <label for="numbers">Phone Numbers</label>
                 <input type="text" id="numbers" pattern="[0-9]{10,11}">
+                <label for="address">Address</label>
+                <input type="text" id="address" pattern="[A-Za-z0-9]{1,20}">
                 <button class="register-btn">Sign up</button>
             </form>
         </div>
