@@ -7,6 +7,7 @@ const product_controller = require('./controller/product.controller')
 const product_view = require('./routes/product_view.router')
 var connection = require('./db');
 var cookieParser = require('cookie-parser')
+//Khai báo sử dụng middleware cookieParse()
 app.use(cookieParser())
 app.listen(port,()=>console.log("Server is running at port",port))
 app.use([

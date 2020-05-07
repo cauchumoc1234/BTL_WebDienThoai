@@ -1,4 +1,5 @@
 const connection = require('../db')
+//Create new user
 module.exports.create = function(req,res){
     var sql = "INSERT INTO `customers` (`customerID`, `username`, `password`, `customerName`, `phoneNumber`, `address`) VALUES (NULL, ?, ?, ?, ?, ?);"
     connection.query(sql,[req.body.username,req.body.password,req.body.fullname,req.body.phonenumbers,req.body.address],function(err,result){
@@ -6,6 +7,7 @@ module.exports.create = function(req,res){
         res.redirect('back');
     })
 }
+//Login
 module.exports.postLogin = function(req,res){
     var username = req.body.username;
     var password = req.body.password;
@@ -32,6 +34,7 @@ module.exports.postLogin = function(req,res){
     })
 
   }
+//Show user information
 module.exports.showProfile = function(req,res){
     var sql = "SELECT * FROM `customers` WHERE `customerID` = "+req.cookies.customerID;
     connection.query(sql,function(err,result){
@@ -43,6 +46,7 @@ module.exports.showProfile = function(req,res){
     })
     
 }
+//Change user information
 module.exports.update=function(req,res){
     var sql = "UPDATE `customers` SET `password` = ?, `customerName` = ?,`phoneNumber` = ?, `address` = ? WHERE `customers`.`username` = "+req.body.username
     connection.query(sql,[req.body.password,req.body.fullname,req.body.phonenumbers,req.body.address],function(err,result){
@@ -57,4 +61,11 @@ module.exports.update=function(req,res){
         }
     })
     })
+}
+module.exports.showCart = function(req,res){
+    res.render('customer/cart')
+}
+module.exports.postLogout= function(req,res){
+    res.clearCookie('customerID',{ path: '/home' })
+    //res.redirect('/home')
 }

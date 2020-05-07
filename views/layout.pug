@@ -21,7 +21,7 @@ head
         | /
         a(href='/customer') Sign up
     .cart
-      a(href='/cart')
+      a(href='/customer/cart')
         i.fa.fa-cart-plus(aria-hidden='true')
   .row-menu
     ul
@@ -87,5 +87,5 @@ block script
 script.
   if(document.cookie){
   var x = document.getElementsByClassName("customer");
-  x[0].innerHTML = "<a href='/customer/profile'>Profile</a>";
+  x[0].innerHTML = "<a href='/customer/profile'>Profile</a>/<a href='/customer/logout'>Logout</a>";
   }
