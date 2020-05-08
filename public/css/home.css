@@ -40,7 +40,7 @@ a:hover{
     height: 100%;
 }
 .logo{
-    background-image: url(/image/logo.png);
+    background-image: url(/image/Logo/med_logo.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;

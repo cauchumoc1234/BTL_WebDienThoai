@@ -65,7 +65,7 @@ module.exports.update=function(req,res){
 module.exports.showCart = function(req,res){
     res.render('customer/cart')
 }
-module.exports.postLogout= function(req,res){
-    res.clearCookie('customerID',{ path: '/home' })
-    //res.redirect('/home')
+module.exports.logout= function(req,res){
+    res.clearCookie("customerID")
+    res.redirect('/home')
 }

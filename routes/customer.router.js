@@ -10,5 +10,5 @@ customer_router.post('/create',customer_controller.create)
 customer_router.get('/profile',customer_controller.showProfile)
 customer_router.post('/profile/update',customer_controller.update)
 customer_router.get('/cart',customer_middleware.requireAuth,customer_controller.showCart)
-customer_router.get('/logout',customer_controller.postLogout)
+customer_router.get('/logout',customer_controller.logout)
 module.exports = customer_router;
