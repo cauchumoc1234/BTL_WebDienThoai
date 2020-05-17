@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require('express')
 const app = express()
 const bodyParser = require('body-parser')
@@ -7,8 +8,9 @@ const product_controller = require('./controller/product.controller')
 const product_view = require('./routes/product_view.router')
 var connection = require('./db');
 var cookieParser = require('cookie-parser')
+var sessionMiddleware = require('./middleware/session.middleware')
 //Khai báo sử dụng middleware cookieParse()
-app.use(cookieParser())
+app.use(cookieParser(process.env.APP_SECRET))
 app.listen(port,()=>console.log("Server is running at port",port))
 app.use([
     bodyParser.json(),
@@ -16,16 +18,12 @@ app.use([
       extended: true,
     })
   ])
+//Set địa chỉ file tĩnh
 app.use(express.static("public"));
+//Set đọc file pug
 app.set('view engine', 'pug');
 app.set('views','./views');
-  //kết nối sql
-connection.connect((err)=>{
-    //nếu có nỗi thì in ra
-    if(err) throw err.stack
-    //nếu thành công
-    console.log("Success connected");
-})
+app.use(sessionMiddleware);
 app.get('/',(req,res)=>{
   res.redirect('/home')
 })

@@ -28,7 +28,7 @@ module.exports.postLogin = function(req,res){
             })
             return;
             }
-            res.cookie('customerID',result[0].customerID)
+            res.cookie('customerID',result[0].customerID,{signed: true})
             res.redirect('/home')
             
     })
@@ -36,7 +36,7 @@ module.exports.postLogin = function(req,res){
   }
 //Show user information
 module.exports.showProfile = function(req,res){
-    var sql = "SELECT * FROM `customers` WHERE `customerID` = "+req.cookies.customerID;
+    var sql = "SELECT * FROM `customers` WHERE `customerID` = "+req.signedCookies.customerID;
     connection.query(sql,function(err,result){
         if(result){
             res.render('customer/profile',{

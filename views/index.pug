@@ -13,16 +13,18 @@ block main
         p(style='color: red; font: bold 2em Arial; text-align: center;') Hottest Product
         .products
           each product in hots
-            a.product-item(href='/product/'+product.productID)
-              div
-                .image
-                  img(src='image/Product/id_'+product.productID+".png", alt='product')
-                  .overlay
-                       button.add-to-cart
-                         i.fa.fa-cart-plus(aria-hidden='true')
-                .info
-                  .name=product.productName
-                  .screen Screen: #{product.productScreen}
-                  .price Price: #{product.buyPrice} M
+            
+              a.product-item(href='/product/'+product.productID)
+                div
+                  .image
+                    img(src='image/Product/id_'+product.productID+".png", alt='product')
+                    .overlay
+                        button.add-to-cart
+                          i.fa.fa-cart-plus(aria-hidden='true')
+                  .info
+                    .name=product.productName
+                    .screen Screen: #{product.productScreen}
+                    .price Price: #{product.buyPrice} M
 block script
     script(src='/js/main.js')
+    script(src='/js/cart.js')

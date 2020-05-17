@@ -178,6 +178,7 @@ button{
     box-sizing: border-box;
     margin-bottom: 20px;
     background-color: aliceblue;
+   
 }
 .product-item{
     width: 20%;
@@ -221,7 +222,7 @@ button{
     justify-content: center;
     transition: opacity 0.5s;
 }
-.overlay .add-to-cart{
+.add-to-cart{
     border-radius: 50%;
     width: 50px;
     height: 50px;

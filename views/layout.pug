@@ -86,7 +86,7 @@ block main
         | Địa chỉ: 88 Lò Đúc,Hai Bà Trưng,Hà Nội
 block script
 script.
-  if(document.cookie){
+  if(document.cookie.search("customerID=") >= 0){
   var x = document.getElementsByClassName("customer");
   x[0].innerHTML = "<a href='/customer/profile'>Profile</a>/<a href='/customer/logout'>Logout</a>";
   }
