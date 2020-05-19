@@ -1,0 +1,26 @@
+table{
+    width: 80%;
+}
+tr{
+    border-bottom: 1px solid rgb(236, 218, 218);
+}
+th{
+    border-bottom: 1px solid gray;
+}
+th,td{
+    padding : 15px;
+}
+.align_center{
+    text-align: center;
+}
+.buy-btn{
+    width: 20%;
+    position: relative;
+    left: 70%;
+}
+.amount{
+    max-width: 40%;
+    border-radius: 10px;
+    text-align: center;
+    border: none;
+}

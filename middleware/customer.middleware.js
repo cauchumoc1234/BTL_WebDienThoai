@@ -8,6 +8,7 @@ module.exports.requireAuth = function(req,res,next){
     connection.query(sql,function(err,result){
         if(err) throw err;
         if(result){
+            res.locals.user = result[0];
             next();
         }
         else res.redirect('/customer')

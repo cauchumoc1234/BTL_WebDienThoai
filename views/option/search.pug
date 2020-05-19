@@ -4,15 +4,20 @@ block title
 block main
    p.alert.alert-success.mt-3.mx-auto(style="color:red;font-size:30px;text-align:center;font-weight:bold") Results for "#{searchFor}"
    .products.products-search 
-        each product in products
-            a.product-item(href='/product/'+product.productID)
-                div
-                    .image
-                        img(src='image/Product/id_'+product.productID+'.png', alt='')
-                        .overlay
-                            button.add-to-cart
-                                i.fa.fa-cart-plus(aria-hidden='true')
-                    .info
-                        .name=product.productName
-                        .screen Screen: #{product.productScreen}
-                        .price Price: #{product.buyPrice} M
+          each product in products
+              .product-item.card(style='width: 20%;height:400px')
+                  a(href='/product/'+product.productID)
+                    img.card-img-top(src='image/Product/id_'+product.productID+".png", alt='product')
+                    .card-body(style="padding:0 0;")
+                      h5.card-title(style="text-align:center;") #{product.productName}
+                      .card-text
+                        p Price: #{product.buyPrice} M
+                        p CPU: #{product.productCPU}
+                        p RAM: #{product.productRAM} GB
+                        p ROM: #{product.productROM} GB
+                        p Brand: #{product.productBrand}
+                  button(name = product.productID).btn.add-to-cart.mx-auto(style="width:100%,margin-top:10px")
+                      i.fa.fa-cart-plus(aria-hidden='true')
+block script
+    script(src='https://unpkg.com/axios/dist/axios.min.js')
+    script(src='/js/cart.js')

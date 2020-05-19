@@ -1,3 +1,6 @@
+*{
+    outline: none;
+}
 html{
     width: 100%;
     height: 100%;
@@ -183,47 +186,44 @@ button{
 .product-item{
     width: 20%;
     height: 400px;
-    padding: 0;
     box-sizing: border-box;
     transition-property: width,background-color,font-size;
-    transition-duration: 0.2s;
-    padding: 2% 2%;
+    transition-duration: 0.3s;
+    padding: 1% 2% 5px;
+    border: none;
+}
+card{
+    height: 400px;
 }
 .product-item:hover{
     background-color: rgb(230, 235, 238);
     box-shadow: 1px 1px 4px rgb(92, 87, 87);
     z-index: 10;
 }
-.product-item .info{
-    color: rgb(117, 126, 134);
-    text-align: center;
-    line-height: 1.5;
+
+.product-item a{
+    display: block;
+    height: 400px;
+    overflow: hidden;
+    color: black;
+    font-size: 12px;
 }
-.product-item:hover .info{
-    color: goldenrod;
+.product-item:hover a{
+    color: rgb(94, 143, 216);
 }
-.product-item .image{
-    width: 100%;
-    height: 100%;
-    position: relative;
+.card-text{
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex-grow:1;
+    height: 80%;
+    overflow: hidden;
 }
 .products-search{
     height: 3500px;
 }
-.overlay{
-    height: 100%;
-    width: 100%;
-    background: radial-gradient(circle, rgba(0,0,0,0.2) 0%, rgba(0,0,0,1) 100%);
-    position: absolute;
-    top: 0;
-    opacity: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: opacity 0.5s;
-}
+
 .add-to-cart{
-    border-radius: 50%;
     width: 50px;
     height: 50px;
     border: none;
@@ -232,10 +232,10 @@ button{
     color: aliceblue;
     font-size: 20px;
 }
-.product-item:hover .overlay{
-    opacity: 1;
+.add-to-cart:hover{
+    color: aliceblue;
+    background-color: rgb(168, 122, 54);
 }
-
 .image img{
     width: 100%;
     height: 100%;
