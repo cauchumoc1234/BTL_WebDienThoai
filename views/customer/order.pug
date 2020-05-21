@@ -1,0 +1,31 @@
+extends ../layout
+block main
+    h1 Order
+    if list_item.length > 0
+        if user
+            form(action = "/customer/cart/order/submit",method="post")
+                .form-group.mx-auto(style = "width : 80%;")
+                    label(for="fullname") Full name
+                    input#fullname.form-control(type="text" , value = user.customerName,readonly)
+                    label(for="phonenumber") Phone number
+                    input#phonenumber.form-control(type="text",value = user.phoneNumber,readonly)
+                    label(for="address") Address
+                    input#address.form-control(type = "text",value = user.address,readonly)
+                    small.form-text.text-muted If you want to change your order info,Click Profile button
+                    table(style="width:100%;").mx-auto
+                        tr
+                            th Product name
+                            th Price
+                            th.align_center Amount
+                        each item in list_item
+                            tr
+                                td #{item.productName}
+                                td #{item.buyPrice} M
+                                td #{item.amount}
+                                td.align_center
+                    tr
+                        p Total: #{total_price} M
+                            span#total
+                    button.mt-3.btn.btn-success.float-right Submit
+    else
+        h4.mt-4.mx-auto(style="color:gray") Your cart is empty

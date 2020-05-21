@@ -1,4 +1,5 @@
 const connection = require('../db')
+const shortid = require('shortid')
 //Create new user
 module.exports.create = function(req,res){
     var sql = "INSERT INTO `customers` (`customerID`, `username`, `password`, `customerName`, `phoneNumber`, `address`) VALUES (NULL, ?, ?, ?, ?, ?);"
@@ -66,7 +67,7 @@ module.exports.update=function(req,res){
 module.exports.showCart = function(req,res){
     var userId = res.locals.user.customerID;
     var sql = "SELECT `products`.`productID`,`quantityInStock`,  `productName`,`buyPrice`,`amount`  FROM `cart` INNER JOIN `products` WHERE `cart`.`productID` = `products`.`productID` AND `cart`.`customerID` = "+req.signedCookies.customerID;
-    console.log(sql);
+    //console.log(sql);
     connection.query(sql,function(err,result){
         if(err) throw err;
         res.render('customer/cart',{list_item : result})
@@ -127,4 +128,53 @@ module.exports.editAmount = function(req,res){
     connection.query(sql,[newAmount , productID , customerID],function(err,result){
         if(err) throw err;
     })
+}
+module.exports.order = function(req,res){
+    console.log(req.signedCookies.customerID);
+    var sql = "SELECT `username`,`customerName`,`phoneNumber`,`address` FROM `customers` WHERE `customerID` = " + req.signedCookies.customerID;
+    connection.query(sql,function(err,result){
+        var user = result[0];
+        var sql_2 = "SELECT `products`.`productID`,`quantityInStock`,  `productName`,`buyPrice`,`amount`,(`buyPrice`*`amount`) AS total  FROM `cart` INNER JOIN `products` WHERE `cart`.`productID` = `products`.`productID` AND `cart`.`customerID` = "+req.signedCookies.customerID;
+        connection.query(sql_2 , function(err,result_2){
+            var total = result_2.reduce(function(t,item){
+                return t += item.total;
+            },0)
+            //console.log(typeof total);
+            res.render('customer/order' , {user: user , list_item : result_2,total_price:total.toFixed(2)})
+        })
+    })
+    
+}
+module.exports.submitOrder = function(req,res){
+    //res.send("hi")
+    var id = shortid.generate()
+    var sql = "SELECT `customerID`, `cart`.`productID`,`amount`, `buyPrice` FROM `cart` INNER JOIN `products` ON `cart`.`productID` = `products`.`productID` WHERE `cart`.`customerID` = " + req.signedCookies.customerID;
+    var now = new Date()
+    var month = now.getMonth() + 1;
+    var date = now.getDate();
+    var year = now.getFullYear();
+    var today = year + "-" + month + "-" +date
+    var sql_orders = "INSERT INTO `orders` (`orderCode`, `orderDate`, `shippedDate`, `status`, `customerID`) VALUES (NULL, ?, NULL , 'Shipping', ?)"
+    connection.query(sql_orders ,[today,req.signedCookies.customerID], function(err,result){
+        connection.query("SELECT * FROM `orders` ORDER BY orderCode DESC LIMIT 1" , function(err,result){
+            var id = result[0].orderCode;
+            
+            connection.query(sql,function(err,result){
+                console.log(result);
+                for(var i of result){
+                    var orderCode = id;
+                    var productID = i.productID,amount = i.amount , buyPrice = i.buyPrice;
+                    var sql_orderdetail = "INSERT INTO `orderdetails`(`orderCode`, `productID`, `amount`, `buyPrice`) VALUES (?,?,?,?)";
+                    connection.query(sql_orderdetail , [orderCode,productID,amount,buyPrice],function(err,result){
+                        if(err) throw err;
+                    })
+                    var sql_clearcart ="DELETE FROM `cart` WHERE `customerID`= " + req.signedCookies.customerID;
+                    connection.query(sql_clearcart)
+                }
+
+            })
+        })
+    })
+    res.redirect('/home')
+
 }

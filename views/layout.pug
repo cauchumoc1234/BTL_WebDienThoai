@@ -23,7 +23,7 @@ head
         | /
         a(href='/customer') Sign up
     .cart
-      a(href='/customer/cart')
+      a(href='/customer/cart' class="btn btn-success btn-lg")
         i.fa.fa-cart-plus(aria-hidden='true')
   .row-menu
     ul
@@ -90,5 +90,5 @@ block script
 script.
   if(document.cookie.search("customerID=") >= 0){
   var x = document.getElementsByClassName("customer");
-  x[0].innerHTML = "<a href='/customer/profile'>Profile</a>/<a href='/customer/logout'>Logout</a>";
+  x[0].innerHTML = "<a href='/customer/profile' class = 'badge badge-success mr-2'>Profile</a><a href='/customer/logout' class = 'badge badge-warning'>Logout</a>";
   }

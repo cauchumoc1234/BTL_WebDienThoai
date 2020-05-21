@@ -3,7 +3,7 @@ block css
       link(rel='stylesheet', href='/css/cart.css')
 block main
     h1.mx-auto Your Cart
-    if list_item
+    if list_item.length > 0
       table.mx-auto
         tr
             th Product name
@@ -19,7 +19,9 @@ block main
                 td.align_center
                   form(action="/customer/cart/delete/"+ item.productID , method= "post") 
                     button.btn.btn-danger.del-btn Delete
-      a.btn.btn-primary.float-md-left.buy-btn(href="cart/order") Buy all
+      a.btn.btn-primary.float-md-left.mt-3.buy-btn(href="cart/order") Buy all
+    else
+      h4.mt-4.mx-auto(style="color:gray") Your cart is empty
 block script
     script(src='https://unpkg.com/axios/dist/axios.min.js')
     script(src='/js/cart.js')

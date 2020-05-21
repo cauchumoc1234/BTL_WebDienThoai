@@ -14,4 +14,6 @@ customer_router.get('/logout',customer_controller.logout)
 customer_router.post('/cart/add/:id',customer_middleware.requireAuth,customer_controller.addProduct)
 customer_router.post('/cart/delete/:id',customer_controller.deleteItem)
 customer_router.post('/cart/edit/:id',customer_controller.editAmount)
+customer_router.get('/cart/order',customer_controller.order)
+customer_router.post('/cart/order/submit', customer_controller.submitOrder)
 module.exports = customer_router;
