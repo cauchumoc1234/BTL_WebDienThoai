@@ -1,9 +1,11 @@
-var all_btn = document.getElementsByClassName("add-to-cart")
+var all_btn = document.getElementsByClassName("add-to-cart");
+//var fetchUrl = require("fetch").fetchUrl;
 for(var i = 0;i < all_btn.length ; i++){
     addEvent(all_btn[i] , all_btn[i].getAttribute("name"))
 }
 function addEvent(button ,id){
     button.addEventListener('click',function(){
+        console.log("clicked");
         axios.post("/customer/cart/add/"+id).then(function(res){
         })
     })

@@ -11,8 +11,9 @@ module.exports.create = function(req,res){
 module.exports.postLogin = function(req,res){
     var username = req.body.username;
     var password = req.body.password;
-    connection.query("SELECT * FROM `customers` WHERE `username` = "+req.body.username,function(err,result){
+    connection.query("SELECT * FROM `customers` WHERE `username` = '"+req.body.username+"'",function(err,result){
             if(!result){
+                console.log(result);
             res.render('customer/customer',{
                 errors:[
                 'User does not exists'
@@ -48,10 +49,10 @@ module.exports.showProfile = function(req,res){
 }
 //Change user information
 module.exports.update=function(req,res){
-    var sql = "UPDATE `customers` SET `password` = ?, `customerName` = ?,`phoneNumber` = ?, `address` = ? WHERE `customers`.`username` = "+req.body.username
+    var sql = "UPDATE `customers` SET `password` = ?, `customerName` = ?,`phoneNumber` = ?, `address` = ? WHERE `customers`.`username` = '"+req.body.username +"'";
     connection.query(sql,[req.body.password,req.body.fullname,req.body.phonenumbers,req.body.address],function(err,result){
         if(err) throw err;
-        var sql = "SELECT * FROM `customers` WHERE `customerID` = "+req.cookies.customerID;
+        var sql = "SELECT * FROM `customers` WHERE `customerID` = "+req.signedCookies.customerID;
     connection.query(sql,function(err,result){
         if(result){
             res.render('customer/profile',{
@@ -64,7 +65,8 @@ module.exports.update=function(req,res){
 }
 module.exports.showCart = function(req,res){
     var userId = res.locals.user.customerID;
-    var sql = "SELECT `products`.`productID`,`quantityInStock`,  `productName`,`buyPrice`,`amount`  FROM `cart` INNER JOIN `products` WHERE `cart`.`productID` = `products`.`productID`"
+    var sql = "SELECT `products`.`productID`,`quantityInStock`,  `productName`,`buyPrice`,`amount`  FROM `cart` INNER JOIN `products` WHERE `cart`.`productID` = `products`.`productID` AND `cart`.`customerID` = "+req.signedCookies.customerID;
+    console.log(sql);
     connection.query(sql,function(err,result){
         if(err) throw err;
         res.render('customer/cart',{list_item : result})

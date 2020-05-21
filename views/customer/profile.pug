@@ -1,11 +1,11 @@
 extend ../layout
 block title
             if user
-                title user.customerName
+                title #{user.customerName}
             else 
                 title Your Profile
 block main
-    h1.mx-auto Your profile
+    h1.mx-auto.mt-3 Your profile
     if alert
         .alert.alert-success.mx-auto #{alert}
     form(action="/customer/profile/update",method="post").mx-auto.mt-3

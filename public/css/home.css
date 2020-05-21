@@ -150,7 +150,9 @@ button{
     position: absolute;
     transition: opacity 0.2s;
     flex-grow: 5;
+    border: none;
 }
+
 .slide-show button{
     flex-grow: 1;
     border-radius: 50%;
