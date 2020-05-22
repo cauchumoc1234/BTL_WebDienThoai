@@ -11,7 +11,13 @@ var cookieParser = require('cookie-parser')
 var sessionMiddleware = require('./middleware/session.middleware')
 //Khai báo sử dụng middleware cookieParse()
 app.use(cookieParser(process.env.APP_SECRET))
-app.listen(port,()=>console.log("Server is running at port",port))
+app.set('port', (process.env.PORT || 3000));
+app.get('/', function(request, response) {
+  var result = 'App is running'
+  response.send(result);
+}).listen(app.get('port'), function() {
+  console.log('App is running, server is listening on port ', app.get('port'));
+});
 app.use([
     bodyParser.json(),
     bodyParser.urlencoded({
