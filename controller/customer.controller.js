@@ -14,7 +14,7 @@ module.exports.postLogin = function(req,res){
     var password = req.body.password;
     connection.query("SELECT * FROM `customers` WHERE `username` = '"+req.body.username+"'",function(err,result){
             if(!result){
-                console.log(result);
+                //console.log(result);
             res.render('customer/customer',{
                 errors:[
                 'User does not exists'
@@ -130,7 +130,7 @@ module.exports.editAmount = function(req,res){
     })
 }
 module.exports.order = function(req,res){
-    console.log(req.signedCookies.customerID);
+    //console.log(req.signedCookies.customerID);
     var sql = "SELECT `username`,`customerName`,`phoneNumber`,`address` FROM `customers` WHERE `customerID` = " + req.signedCookies.customerID;
     connection.query(sql,function(err,result){
         var user = result[0];
@@ -160,7 +160,7 @@ module.exports.submitOrder = function(req,res){
             var id = result[0].orderCode;
             
             connection.query(sql,function(err,result){
-                console.log(result);
+                //console.log(result);
                 for(var i of result){
                     var orderCode = id;
                     var productID = i.productID,amount = i.amount , buyPrice = i.buyPrice;
