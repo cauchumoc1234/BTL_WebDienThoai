@@ -13,8 +13,8 @@ var sessionMiddleware = require('./middleware/session.middleware')
 app.use(cookieParser(process.env.APP_SECRET))
 app.set('port', (process.env.PORT || 3000));
 app.get('/', function(request, response) {
-  // response.redirect('https://aladin-tech.herokuapp.com/home');
-  response.render('index')
+  response.redirect('/home');
+  //response.render('index')
 }).listen(app.get('port'), function() {
   console.log('App is running, server is listening on port ', app.get('port'));
 });
