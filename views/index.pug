@@ -12,7 +12,8 @@ block main
             button.left-btn(onclick='plusDivs(-1)') &#x276E;
             button.right-btn(onclick='plusDivs(1)') &#x276F;
         p(style='color: red; font: bold 2em Arial; text-align: center;') Hottest Product
-        .products
+        .products.container
+         .row
           each product in hots
               .product-item.card(style='width: 20%;height:100%')
                   a(href='/product/'+product.productID)

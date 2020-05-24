@@ -2,138 +2,88 @@
     outline: none;
 }
 html{
-    max-width: 100%;
-    height: 100%;
-}
-body{
     width: 100%;
     height: 100%;
-    display: flex;
-    flex-direction: column;
-    background-color: rgb(234, 237, 240);
-    position: relative;
 }
 .header{
-    height: 15%;
-    width: 100%;
-    margin: 0;
-    background-color: rgb(180, 21, 21);
-    display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
-}
-a{
-    display: block;
-    color: rgb(211, 241, 217);
-    text-decoration: none;
-}
-a:hover{
-    color: rgb(132, 197, 124);
-    text-decoration: none;
+    width: 80%;
+    background-color: brown;
 }
 .top{
-    width: 100%;
-    flex-grow: 3;
-    display: flex;
-    
+    padding: 2% 0;
 }
-.top .home{
-    height: 100%;
-    flex-grow: 2;
-}
-.top div{
-    height: 100%;
+.top :nth-child(){
+    padding: 0;
 }
 .logo{
     background-image: url(/image/Logo/med_logo.png);
+    height: 100px;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
 }
 .search-box{
-    flex-grow: 5;
+    margin-top: 3%;
+}
+.search-box .row{
+    height: 100%;
     display: flex;
-    box-sizing: border-box;
-    padding: 20px;
+    justify-content: center;
+    align-items: center;
     
-}
-.search-box input{
-    flex-grow: 7;
-    height: 80%;
-    padding-left: 2%;
-    border-radius: 8px 0px 0px 8px;
-    border-width: 0;
-    font-size: 80%;
-    box-sizing: border-box;
-}
-button{
-    outline:none !important;
 }
 .search-box button{
-    flex-grow: 1;
-    border-radius: 0px 8px 8px 0px;
-    height: 80%;
-    background-color: rgb(221, 88, 88);
-    color: aliceblue;
-    border-width: 0;
-    
+    background-color: aqua;
+    border: none;
+}
+.search-box input{
+    height: 50%;
 }
 .customer{
-    flex-grow: 0.2;
-    font-size: 20px;
-    display: flex;
-    color: aliceblue;
-    align-items: center;
-    justify-content: center;
+    margin-top: 3%;
 }
 .cart{
-    flex-grow: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 4em;
+    margin-top: 2%;
 }
-.row-menu ul{
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+ul{
+    list-style-type: none;
 }
-.item{
-    flex-grow: 1;
-    background-color: rgb(209, 28, 28);
-    height: 35px;
-    transition: background-color 0.2s;
-    border-bottom: 1px solid rgb(228, 61, 61);
-    border-left: 1px solid rgb(236, 53, 53);
-}
-.item a{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    color: rgb(253, 216, 4);
-    
-    font-size: 18px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
-}
-.item:hover{
-    background-color: rgb(226, 43, 89);
+.row-menu{
+    background-color: aqua;
+    position: relative;
 }
 .sub-menu{
     display: flex;
+    width: 100%;
+    left: 0;
     flex-direction: column;
-    position: relative;
+    position: absolute;
     visibility: hidden;
 }
 .drop:hover .sub-menu{
-    z-index: 1;
+   z-index: 1;
    visibility: visible;
 }
-
-.main{
-    flex-grow: 1;
+.item{
+    background-color: rgb(209, 28, 28);
+    transition: background-color 0.2s;
+    border-bottom: 1px solid rgb(228, 61, 61);
+    border-left: 1px solid rgb(236, 53, 53);
+    padding: 0;
+    
+}
+.item a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: yellow;
+    text-decoration: none;
+}
+.item a:hover{
+    background-color: rgb(172, 69, 43);
+}
+.footer{
+    width: 80%;
 }
 .main .slide-show{
     height: 300px;
@@ -154,7 +104,6 @@ button{
     flex-grow: 5;
     border: none;
 }
-
 .slide-show button{
     flex-grow: 1;
     border-radius: 50%;
@@ -178,7 +127,7 @@ button{
 }
 .products{
     width: 80%;
-    height: 400px;
+    min-height: 400px;
     display: flex;
     flex-wrap: wrap;
     margin: auto;
@@ -196,6 +145,10 @@ button{
     padding: 1% 2% 5px;
     border: none;
 }
+.products::after{
+    content: "";
+    clear: both;
+}
 card{
     height: 400px;
 }
@@ -207,13 +160,14 @@ card{
 
 .product-item a{
     display: block;
-    height: 400px;
+    min-height: 400px;
     overflow: hidden;
     color: black;
     font-size: 12px;
 }
 .product-item:hover a{
     color: rgb(94, 143, 216);
+    text-decoration: none;
 }
 .card-text{
     white-space: nowrap; 
@@ -223,10 +177,20 @@ card{
     height: 80%;
     overflow: hidden;
 }
-.products-search{
-    height: 3500px;
+.footer{
+    background-color: rgb(116, 133, 133);
+    box-sizing: border-box;
+    margin-top: 50px;
+    padding: 3% 10%;
+    color: aqua;
 }
-
+.footer a{
+    color: aliceblue;
+    text-decoration: none;
+}
+.footer a:hover{
+    color: aquamarine;
+}
 .add-to-cart{
     width: 50px;
     height: 50px;
@@ -239,14 +203,4 @@ card{
 .add-to-cart:hover{
     color: aliceblue;
     background-color: rgb(168, 122, 54);
-}
-.image img{
-    width: 100%;
-    height: 100%;
-}
-.footer{
-    background-color: rgb(116, 133, 133);
-    box-sizing: border-box;
-    margin-top: 50px;
-    padding: 3% 10%;
 }

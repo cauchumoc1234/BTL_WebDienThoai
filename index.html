@@ -1,161 +1,62 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title>Trang chủ</title>
-	<link rel="stylesheet" href="./public/css/home.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-<body>
-	<div class="header">
-		<div class="top">
-			<a class="home" href="index.html"><div class="logo"></div></a>
-			<div class="search-box">
-				<input type="text" placeholder="Search...">
-				<button><i class="fa fa-search" aria-hidden="true"></i></button>
-			</div>
-			<div class="customer">
-				<a href="login_form.html">Sign in</a>/<a href="#">Sign up</a>
-			</div>
-			<div class="cart">
-				<a href="login_form.html"><i class="fa fa-cart-plus" aria-hidden="true"></i></a>
-			</div>
-		</div>
-		<div class="row-menu">
-				<ul>
-					<li class="item drop">
-						<a href="#"><i class="fa fa-mobile" aria-hidden="true"></i>ALL</a>
-						<ul class="sub-menu">
-							<li class="item"><a href="#">APPLE</a></li>
-							<li class="item"><a href="#">SAMSUNG</a></li>
-							<li class="item"><a href="#">HUAWEI</a></li>
-							<li class="item"><a href="#">OPPO</a></li>
-							<li class="item"><a href="#">XIAOMI</a></li>
-							<li class="item"><a href="#">VSMART</a></li>
-						</ul>
-					</li>
-					<li class="item"><a href="#"><i class="fa fa-apple" aria-hidden="true"></i></i>APPLE</a></li>
-					<li class="item"><a href="#"><i class="fa fa-mobile" aria-hidden="true"></i> SAMSUNG</a></li>
-					<li class="item"><a href="#"><i class="fa fa-mobile" aria-hidden="true"></i>XIAOMI</a></li>
-					<li class="item"><a href="#"><i class="fa fa-mobile" aria-hidden="true"></i>OPPO</a></li>
-				</ul>
-		</div>
-	</div>
-	<div class="main">
-		
-		<div class="slide-show">
-			
-			<img src="/image/SlideShow/slide_1.jpg" alt="Slide 1" class="slide-item">
-			<img src="/image/SlideShow/slide_2.jpg" alt="Slide 2" class="slide-item">
-			<img src="/image/SlideShow/slide_3.jpg" alt="Slide 3" class="slide-item">
-			<img src="/image/SlideShow/slide_4.jpg" alt="Slide 4" class="slide-item">
-			
-				<button class="left-btn" onclick="plusDivs(-1)">&#10094;</button>
-				
-				<button class="right-btn" onclick="plusDivs(1)">&#10095;</button>
-			
-			
-			
-		</div>
-		<p style="color: red; font: bold 2em Arial; text-align: center;">Hottest Product</p>
-		<div class="products">
-			<a href="#" class="product-item">
-				<div >
-					<div class="image"><img src=".\css\image\Product\Product_1.png" alt=""><div class="overlay">
-						<button class="add-to-cart">
-							<i class="fa fa-cart-plus" aria-hidden="true"></i>
-						</button>
-					</div></div>
-					<div class="info">
-						<div class="name">iPhone 11 Pro Max 64GB</div>
-						<div class="price">39.999.000 VND</div>
-					</div>
-				</div>
-			</a>
-			
-			<a href="#" class="product-item">
-				<div >
-					<div class="image">
-						<img src=".\css\image\Product\Product_2_SS_Galaxy S20 Ultra.png" alt="">
-						<div class="overlay">
-							<button class="add-to-cart">
-								<i class="fa fa-cart-plus" aria-hidden="true"></i>
-							</button>
-						</div>
-					</div>
 
-					<div class="info">
-						<div class="name">Samsung Galaxy S20 Ultra</div>
-						<div class="price">29.590.000 VND</div>
-					</div>
-				</div>
-			</a>
-			<a href="#" class="product-item">
-				<div >
-					<div class="image"><img src=".\css\image\Product\Product_3_Huawei P30 Pro.png" alt="">
-						<div class="overlay">
-							<button class="add-to-cart">
-								<i class="fa fa-cart-plus" aria-hidden="true"></i>
-							</button>
-						</div></div>
-					<div class="info">
-						<div class="name">Huawei P30 Pro</div>
-						<div class="price">14.990.000 VND</div>
-					</div>
-				</div>
-			</a>
-			<a href="#" class="product-item">
-				<div >
-					<div class="image"><img src=".\css\image\Product\Product_4_Samsung Galaxy Note 10+.png" alt=""><div class="overlay">
-						<button class="add-to-cart">
-							<i class="fa fa-cart-plus" aria-hidden="true"></i>
-						</button>
-					</div></div>
-					<div class="info">
-						<div class="name">Samsung Galaxy Note 10+</div>
-						<div class="price">26.990.000 VND</div>
-					</div>
-				</div>
-			</a>
-			<a href="#" class="product-item">
-				<div >
-					<div class="image"><img src=".\css\image\Product\Product_5_OPPO Reno2 F.png" alt=""><div class="overlay">
-						<button class="add-to-cart">
-							<i class="fa fa-cart-plus" aria-hidden="true"></i>
-						</button>
-					</div></div>
-					<div class="info">
-						<div class="name">OPPO Reno2 F</div>
-						<div class="price">7.980.000 VND</div>
-					</div>
-				</div>
-			</a>
-		</div>
-	</div>
-	<div class="footer">
-		<div class="col col-1">
-			<p><a href="#">About us</a></p>
-			<p><a href="#">Câu hỏi thường gặp</a></p>
-			<p><a href="#">Tra cứu thông tin bảo hành</a></p>
-		</div>
-		<div class="col col-2">
-			<p><a href="#">Tin khuyến mãi</a></p>
-			<p><a href="#">Hướng dẫn mua online</a></p>
-			<p><a href="#">Hướng dẫn mua trả góp</a></p>
-		</div>
-		<div class="col col-3">
-			<p>Tư vấn mua hàng</p>
-			<p>1800 1800</p>
-			<p>Địa chỉ: Nhà báo tại gia - ăn rồi báo cha báo mẹ
-			</p>
-		</div>
-	</div>
-	<script src="./js/main.js"></script>
-	<script>
-		if(document.cookie){
-			document.getElementById("customer").innerHTML = "Profile"
-		}
-	</script>
-</body>
-</html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" type="image/png" href="/image/Logo/fav_logo.png" sizes="16x16">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/home.css">
+</head>
+<div class="header">
+    <div class="top">
+        <a class="home" href="/home">
+            <div class="logo"></div>
+        </a>
+        <form class="search-box" action="/search" method="get"><input type="text" placeholder="Search..." name="q"><button><i class="fa fa-search" aria-hidden="true"></i></button></form>
+        <div class="customer"><a href="/customer">Sign in</a>/<a href="/customer">Sign up</a></div>
+        <div class="cart"><a class="btn btn-success btn-lg" href="/customer/cart"><i class="fa fa-cart-plus" aria-hidden="true"></i></a></div>
+    </div>
+    <div class="row-menu">
+        <ul>
+            <li class="item drop"><a href="/search?q="><i class="fa fa-mobile" aria-hidden="true"></i><span>&nbsp</span>ALL</a>
+                <ul class="sub-menu">
+                    <li class="item"><a href="/search?q=apple">APPLE</a></li>
+                    <li class="item"><a href="/search?q=samsung">SAMSUNG</a></li>
+                    <li class="item"><a href="/search?q=huawei">HUAWEI</a></li>
+                    <li class="item"><a href="/search?q=oppo">OPPO</a></li>
+                    <li class="item"><a href="/search?q=xiaomi">XIAOMI</a></li>
+                    <li class="item"><a href="/search?q=vsmart">VSMART</a></li>
+                </ul>
+            </li>
+            <li class="item"><a href="/search?q=apple"><i class="fa fa-apple" aria-hidden="true"></i><span>&nbsp</span>APPLE</a></li>
+            <li class="item"><a href="/search?q=samsung"><i class="fa fa-mobile" aria-hidden="true"></i><span>&nbsp</span> SAMSUNG</a></li>
+            <li class="item"><a href="/search?q=xiaomi"><i class="fa fa-mobile" aria-hidden="true"></i><span>&nbsp</span>XIAOMI</a></li>
+            <li class="item"><a href="/search?q=oppo"><i class="fa fa-mobile" aria-hidden="true"></i><span>&nbsp</span>OPPO</a></li>
+        </ul>
+    </div>
+</div>
+<div class="footer">
+    <div class="row">
+        <div class="col-md-4">
+            <p><a href="/search?q=">About us</a></p>
+            <p><a href="/search?q=">Câu hỏi thường gặp</a></p>
+            <p><a href="/search?q=">Tra cứu thông tin</a></p>
+        </div>
+        <div class="col-md-4">
+            <p><a href="/search?q=">Tin khuyến mãi</a></p>
+            <p><a href="/search?q=">Hình thức mua online</a></p>
+        </div>
+        <div class="col-md-4">
+            <p>Thông tin liên hệ</p>
+            <p>1800 1800</p>
+            <p>Địa chỉ: 88 Lò Đúc,Hai Bà Trưng,Hà Nội</p>
+        </div>
+    </div>
+</div>
+<script>
+    if (document.cookie.search("customerID=") >= 0) {
+        var x = document.getElementsByClassName("customer");
+        x[0].innerHTML = "<a href='/customer/profile' class = 'badge badge-success mr-2'>Profile</a><a href='/customer/logout' class = 'badge badge-warning'>Logout</a>";
+    }
+</script>

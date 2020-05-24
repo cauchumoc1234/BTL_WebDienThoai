@@ -6,28 +6,30 @@ head
   link(rel='icon', type='image/png', href='/image/Logo/fav_logo.png',sizes='16x16')
   link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
   link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css')
-  link(rel='stylesheet', href='/css/home.css')
+  //link(rel='stylesheet', href='/css/home.css')
+  link(rel='stylesheet', href='/css/layer.css')
   block css
   
-.header
-
-  .top
-    a.home(href='/home')
-      .logo
-    form(action="/search" , method="get").search-box
-      input(type='text', placeholder='Search...',name="q")
-      button
-        i.fa.fa-search(aria-hidden='true')
-    .customer
-        a(href='/customer') Sign in
-        | /
-        a(href='/customer') Sign up
-    .cart
-      a(href='/customer/cart' class="btn btn-success btn-lg")
-        i.fa.fa-cart-plus(aria-hidden='true')
-  .row-menu
-    ul
-      li.item.drop
+.header.mx-auto
+  .top.container-fluid
+    .row.mx-auto
+      a.home.col-md-3.align-self-center(href='/home')
+        .logo
+      form.search-box.col-md-6.container(action='/search', method='get')
+        .input-group.mb-3
+          input.form-control(type='text', placeholder='Search',name="q" aria-describedby='basic-addon2')
+          .input-group-append
+            button.btn.btn-outline-secondary
+              i.fa.fa-search(aria-hidden='true')
+      .customer.col-md-2
+        a.badge.badge-primary.mr-2(href='/customer') Sign in
+        a.badge.badge-primary(href='/customer') Sign up
+      .cart.col-md-1
+        a.btn.btn-success.btn-lg(href='/customer/cart')
+          i.fa.fa-cart-plus(aria-hidden='true')
+  .row-menu.container-fluid
+    ul.row(style='padding:0; text-align: center;')
+      li.item.drop.col-sm-3
         a(href='/search?q=')
           i.fa.fa-mobile(aria-hidden='true')
           span &nbsp
@@ -45,29 +47,25 @@ head
             a(href='/search?q=xiaomi') XIAOMI
           li.item
             a(href='/search?q=vsmart') VSMART
-      li.item
+      li.item.col-sm-2
         a(href='/search?q=apple')
-          i.fa.fa-apple(aria-hidden='true')
           span &nbsp
           | APPLE
-      li.item
+      li.item.col-sm-3
         a(href='/search?q=samsung')
-          i.fa.fa-mobile(aria-hidden='true')
           span &nbsp
-          |  SAMSUNG
-      li.item
+          | SAMSUNG
+      li.item.col-sm-2
         a(href='/search?q=xiaomi')
-          i.fa.fa-mobile(aria-hidden='true')
           span &nbsp
           | XIAOMI
-      li.item
+      li.item.col-sm-2
         a(href='/search?q=oppo')
-          i.fa.fa-mobile(aria-hidden='true')
           span &nbsp
           | OPPO
 block main
 
-.footer
+.footer(class="mx-auto")
   .row
     .col-md-4
       p
