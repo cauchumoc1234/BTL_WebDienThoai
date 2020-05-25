@@ -60,6 +60,7 @@ module.exports.update=function(req,res){
                 user: result[0],
                 alert: "Changed successfully"
             })
+            return;
         }
     })
     })

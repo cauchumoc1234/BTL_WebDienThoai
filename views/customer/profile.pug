@@ -6,18 +6,25 @@ block title
                 title Your Profile
 block main
     h1.mx-auto.mt-3 Your profile
-    if alert
-        .alert.alert-success.mx-auto #{alert}
-    form(action="/customer/profile/update",method="post").mx-auto.mt-3
-            label(for='username') Username
-            input#username.form-control(type='text', value= user.username,name="username",aria-describedby="username",readonly)
-            small#username.form-text.text-muted Your username can't be changed
-            label(for='password') Password
-            input#password.form-control(type='password', value= user.password, pattern='[A-Za-z0-9]{6,20}',name="password",aria-describedby="password")
-            label(for='fullname') Full name
-            input#fullname.form-control(type='text', value= user.customerName,name="fullname",aria-describedby="fullname")
-            label(for='phonenumbers') Phone Numbers
-            input#phonenumbers.form-control(type='text', value= user.phoneNumber,pattern='[0-9]{10,11}',name="phonenumbers",aria-describedby="phonenumbers")
-            label(for='address') Address
-            input#address.form-control(type='text', value= user.address,name="address",aria-describedby="address")
+
+    .container
+        if alert
+            .alert.alert-success.mx-auto #{alert}
+        form(action="/customer/profile/update",method="post").mx-auto.mt-3.ml-2
+            .form-group
+                label(for='username') Username
+                input#username.form-control(type='text', value= user.username,name="username",aria-describedby="username",readonly)
+                small#username.form-text.text-muted Your username can't be changed
+            .form-group
+                label(for='password') Password
+                input#password.form-control(type='password', value= user.password, pattern='[A-Za-z0-9]{6,20}',name="password",aria-describedby="password")
+            .form-group
+                label(for='fullname') Full name
+                input#fullname.form-control(type='text', value= user.customerName,name="fullname",aria-describedby="fullname")
+            .form-group
+                label(for='phonenumbers') Phone Numbers
+                input#phonenumbers.form-control(type='text', value= user.phoneNumber,pattern='[0-9]{10,11}',name="phonenumbers",aria-describedby="phonenumbers")
+            .form-group
+                label(for='address') Address
+                input#address.form-control(type='text', value= user.address,name="address",aria-describedby="address")
             button.btn.btn-primary.ml-5.mt-3 Save change
