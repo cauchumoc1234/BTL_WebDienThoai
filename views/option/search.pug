@@ -3,9 +3,9 @@ block title
   title Products
 block main
    p.alert.alert-success.mt-3.mx-auto(style="color:red;font-size:30px;text-align:center;font-weight:bold") Results for "#{searchFor}"
-   .products.products-search 
+   .products.products-search
           each product in products
-              .product-item.card(style='width: 20%;height:400px')
+              .product-item.card(style='width: 20%;height:100%')
                   a(href='/product/'+product.productID)
                     img.card-img-top(src='image/Product/id_'+product.productID+".png", alt='product')
                     .card-body(style="padding:0 0;")
