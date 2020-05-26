@@ -8,7 +8,7 @@ block main
 
 
     .container
-        h1.mx-auto.mt-3 Your profile
+        h1.mx-auto.mt-3(style = "color:orange;") Your profile
         if alert
             .alert.alert-success.mx-auto #{alert}
         form(action="/customer/profile/update",method="post").mx-auto.mt-3.ml-2

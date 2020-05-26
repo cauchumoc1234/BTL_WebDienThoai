@@ -2,7 +2,7 @@ extends ../layout
 block title
   title Products
 block main
-   p.alert.alert-success.mt-3.mx-auto(style="color:red;font-size:30px;text-align:center;font-weight:bold") Results for "#{searchFor}"
+   p.alert.alert-success.mt-3.mx-auto(style="color:red;font-size:30px;text-align:center;font-weight:bold;width:80%;") Results for "#{searchFor}"
    .products.products-search
           each product in products
               .product-item.card(style='width: 20%;height:100%')
