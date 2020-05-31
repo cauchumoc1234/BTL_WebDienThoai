@@ -37,9 +37,7 @@
 ![image](https://user-images.githubusercontent.com/63864624/83353117-79061200-a37a-11ea-83ba-b96c3fdf247a.png)
 - Cấu trúc cơ sở dữ liệu
     + cơ sở dữ liệu
-    <p align = "left">
-   <img src = "![image](https://user-images.githubusercontent.com/63864624/83353135-9aff9480-a37a-11ea-965a-bb2122bb5cd4.png)">
-    </p>
+    ![image](https://user-images.githubusercontent.com/63864624/83353135-9aff9480-a37a-11ea-965a-bb2122bb5cd4.png)
     + customers
     ![image](https://user-images.githubusercontent.com/63864624/83353139-a81c8380-a37a-11ea-90c4-830c04f19b4e.png)
     + orders 
