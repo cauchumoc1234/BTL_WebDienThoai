@@ -49,7 +49,7 @@
     + products
     ![image](https://user-images.githubusercontent.com/63864624/83353188-f7fb4a80-a37a-11ea-8955-fd5cedd93bf5.png)
     + cart 
-    ![image](https://user-images.githubusercontent.com/63864624/83353194-03e70c80-a37b-11ea-8e61-ca62fbdb9451.png)
+    ![image](https://user-images.githubusercontent.com/63864624/83353623-01d27d00-a37e-11ea-8722-4977e2e0ac82.png)
 ## Giao diện website
 - Giao diện trang chủ
 
