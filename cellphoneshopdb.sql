@@ -2,10 +2,10 @@
 -- version 5.0.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: May 23, 2020 at 09:33 AM
--- Server version: 10.4.11-MariaDB
--- PHP Version: 7.4.3
+-- Máy chủ: 127.0.0.1
+-- Thời gian đã tạo: Th5 31, 2020 lúc 02:57 PM
+-- Phiên bản máy phục vụ: 10.4.11-MariaDB
+-- Phiên bản PHP: 7.4.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,14 +19,15 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `cellphoneshopdb`
+-- Cơ sở dữ liệu: `cellphoneshopdb`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cart`
+-- Cấu trúc bảng cho bảng `cart`
 --
+
 CREATE TABLE `cart` (
   `customerID` int(11) NOT NULL,
   `productID` int(11) NOT NULL,
@@ -34,7 +35,7 @@ CREATE TABLE `cart` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `cart`
+-- Đang đổ dữ liệu cho bảng `cart`
 --
 
 INSERT INTO `cart` (`customerID`, `productID`, `amount`) VALUES
@@ -45,7 +46,7 @@ INSERT INTO `cart` (`customerID`, `productID`, `amount`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `customers`
+-- Cấu trúc bảng cho bảng `customers`
 --
 
 CREATE TABLE `customers` (
@@ -58,7 +59,7 @@ CREATE TABLE `customers` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `customers`
+-- Đang đổ dữ liệu cho bảng `customers`
 --
 
 INSERT INTO `customers` (`customerID`, `username`, `password`, `customerName`, `phoneNumber`, `address`) VALUES
@@ -69,7 +70,7 @@ INSERT INTO `customers` (`customerID`, `username`, `password`, `customerName`, `
 -- --------------------------------------------------------
 
 --
--- Table structure for table `orderdetails`
+-- Cấu trúc bảng cho bảng `orderdetails`
 --
 
 CREATE TABLE `orderdetails` (
@@ -80,7 +81,7 @@ CREATE TABLE `orderdetails` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `orderdetails`
+-- Đang đổ dữ liệu cho bảng `orderdetails`
 --
 
 INSERT INTO `orderdetails` (`orderCode`, `productID`, `amount`, `buyPrice`) VALUES
@@ -95,7 +96,7 @@ INSERT INTO `orderdetails` (`orderCode`, `productID`, `amount`, `buyPrice`) VALU
 -- --------------------------------------------------------
 
 --
--- Table structure for table `orders`
+-- Cấu trúc bảng cho bảng `orders`
 --
 
 CREATE TABLE `orders` (
@@ -107,7 +108,7 @@ CREATE TABLE `orders` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `orders`
+-- Đang đổ dữ liệu cho bảng `orders`
 --
 
 INSERT INTO `orders` (`orderCode`, `orderDate`, `shippedDate`, `status`, `customerID`) VALUES
@@ -117,7 +118,7 @@ INSERT INTO `orders` (`orderCode`, `orderDate`, `shippedDate`, `status`, `custom
 -- --------------------------------------------------------
 
 --
--- Table structure for table `productbrands`
+-- Cấu trúc bảng cho bảng `productbrands`
 --
 
 CREATE TABLE `productbrands` (
@@ -128,7 +129,7 @@ CREATE TABLE `productbrands` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `productbrands`
+-- Đang đổ dữ liệu cho bảng `productbrands`
 --
 
 INSERT INTO `productbrands` (`productBrand`, `description`, `countryOrigin`, `image`) VALUES
@@ -142,7 +143,7 @@ INSERT INTO `productbrands` (`productBrand`, `description`, `countryOrigin`, `im
 -- --------------------------------------------------------
 
 --
--- Table structure for table `products`
+-- Cấu trúc bảng cho bảng `products`
 --
 
 CREATE TABLE `products` (
@@ -163,7 +164,7 @@ CREATE TABLE `products` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `products`
+-- Đang đổ dữ liệu cho bảng `products`
 --
 
 INSERT INTO `products` (`productID`, `productName`, `productBrand`, `productScreen`, `productCPU`, `productRAM`, `productROM`, `description`, `quantityInStock`, `buyPrice`, `productOS`, `productBattery`, `mainCamera`, `secondaryCamera`) VALUES
@@ -196,97 +197,97 @@ INSERT INTO `products` (`productID`, `productName`, `productBrand`, `productScre
 (38, 'Vsmart Active 3', 'Vsmart', '6.39 inchs, Full HD ', 'MediaTek Helio P60 8 nhân, 8, 2.0Ghz', 6, 64, NULL, 33, '4.00', 'Android 9', 4020, '48 MP f/1.7 + 8MP f/2.2 + 2MP', '16.0 MP');
 
 --
--- Indexes for dumped tables
+-- Chỉ mục cho các bảng đã đổ
 --
 
 --
--- Indexes for table `cart`
+-- Chỉ mục cho bảng `cart`
 --
 ALTER TABLE `cart`
   ADD KEY `product_id_cart` (`productID`),
   ADD KEY `customer_id_cart` (`customerID`);
 
 --
--- Indexes for table `customers`
+-- Chỉ mục cho bảng `customers`
 --
 ALTER TABLE `customers`
   ADD PRIMARY KEY (`customerID`);
 
 --
--- Indexes for table `orderdetails`
+-- Chỉ mục cho bảng `orderdetails`
 --
 ALTER TABLE `orderdetails`
   ADD KEY `orderCode` (`orderCode`),
   ADD KEY `productID` (`productID`);
 
 --
--- Indexes for table `orders`
+-- Chỉ mục cho bảng `orders`
 --
 ALTER TABLE `orders`
   ADD PRIMARY KEY (`orderCode`),
   ADD KEY `customerID` (`customerID`);
 
 --
--- Indexes for table `productbrands`
+-- Chỉ mục cho bảng `productbrands`
 --
 ALTER TABLE `productbrands`
   ADD PRIMARY KEY (`productBrand`);
 
 --
--- Indexes for table `products`
+-- Chỉ mục cho bảng `products`
 --
 ALTER TABLE `products`
   ADD PRIMARY KEY (`productID`),
   ADD KEY `product_brand` (`productBrand`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT cho các bảng đã đổ
 --
 
 --
--- AUTO_INCREMENT for table `customers`
+-- AUTO_INCREMENT cho bảng `customers`
 --
 ALTER TABLE `customers`
   MODIFY `customerID` int(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
--- AUTO_INCREMENT for table `orders`
+-- AUTO_INCREMENT cho bảng `orders`
 --
 ALTER TABLE `orders`
   MODIFY `orderCode` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
--- AUTO_INCREMENT for table `products`
+-- AUTO_INCREMENT cho bảng `products`
 --
 ALTER TABLE `products`
   MODIFY `productID` int(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 
 --
--- Constraints for dumped tables
+-- Các ràng buộc cho các bảng đã đổ
 --
 
 --
--- Constraints for table `cart`
+-- Các ràng buộc cho bảng `cart`
 --
 ALTER TABLE `cart`
   ADD CONSTRAINT `customer_id_cart` FOREIGN KEY (`customerID`) REFERENCES `customers` (`customerID`) ON DELETE CASCADE,
   ADD CONSTRAINT `product_id_cart` FOREIGN KEY (`productID`) REFERENCES `products` (`productID`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `orderdetails`
+-- Các ràng buộc cho bảng `orderdetails`
 --
 ALTER TABLE `orderdetails`
   ADD CONSTRAINT `orderdetails_ibfk_1` FOREIGN KEY (`orderCode`) REFERENCES `orders` (`orderCode`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `orderdetails_ibfk_2` FOREIGN KEY (`productID`) REFERENCES `products` (`productID`);
 
 --
--- Constraints for table `orders`
+-- Các ràng buộc cho bảng `orders`
 --
 ALTER TABLE `orders`
   ADD CONSTRAINT `orders_ibfk_1` FOREIGN KEY (`customerID`) REFERENCES `customers` (`customerID`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `products`
+-- Các ràng buộc cho bảng `products`
 --
 ALTER TABLE `products`
   ADD CONSTRAINT `product_brand` FOREIGN KEY (`productBrand`) REFERENCES `productbrands` (`productBrand`) ON DELETE NO ACTION ON UPDATE CASCADE;
