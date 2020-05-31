@@ -16,13 +16,10 @@
 ## Công nghệ sử dụng 
 - Multi-Page Application 
 ![image](https://user-images.githubusercontent.com/63864624/83350178-8a442400-a364-11ea-91fe-c4c9b2611c04.png)
-
 - NodeJS 
 ![image](https://user-images.githubusercontent.com/63864624/83350182-962fe600-a364-11ea-8ec7-81ae4a7fee47.png)
-
 - MySQL
 ![image](https://user-images.githubusercontent.com/63864624/83350185-a34cd500-a364-11ea-8c21-4bec26647027.png)
-
 - PUG
 ![image](https://user-images.githubusercontent.com/63864624/83350192-af389700-a364-11ea-992e-5ad32f8dc16d.png)
 
@@ -37,23 +34,40 @@
 
 ## Cấu trúc thư mục và cơ sở dữ liệu
 - Thư mục
-![image](https://user-images.githubusercontent.com/63864624/83353117-79061200-a37a-11ea-83ba-b96c3fdf247a.png)
+<p align="center">
+  <img width="460" height="300" src="![image](https://user-images.githubusercontent.com/63864624/83353117-79061200-a37a-11ea-83ba-b96c3fdf247a.png)">
+</p>
+
 - Cấu trúc cơ sở dữ liệu
     + cơ sở dữ liệu
-    ![image](https://user-images.githubusercontent.com/63864624/83353135-9aff9480-a37a-11ea-965a-bb2122bb5cd4.png)
+    <p align="center">
+  <img width="460" height="300" src="![image](https://user-images.githubusercontent.com/63864624/83353135-9aff9480-a37a-11ea-965a-bb2122bb5cd4.png)">
+</p>
     + customers
-    ![image](https://user-images.githubusercontent.com/63864624/83353139-a81c8380-a37a-11ea-90c4-830c04f19b4e.png)
+    <p align="center">
+  <img width="460" height="300" src="![image](https://user-images.githubusercontent.com/63864624/83353139-a81c8380-a37a-11ea-90c4-830c04f19b4e.png)">
+</p>
     + orders 
-    ![image](https://user-images.githubusercontent.com/63864624/83353149-b7033600-a37a-11ea-8ff9-536c118e9acd.png)
+    <p align="center">
+  <img width="460" height="300" src="![image](https://user-images.githubusercontent.com/63864624/83353149-b7033600-a37a-11ea-8ff9-536c118e9acd.png)">
+</p>
     + orderdetails
-    ![image](https://user-images.githubusercontent.com/63864624/83353163-cedaba00-a37a-11ea-9843-6451fd436a07.png)
+    <p align="center">
+  <img width="460" height="300" src="![image](https://user-images.githubusercontent.com/63864624/83353163-cedaba00-a37a-11ea-9843-6451fd436a07.png)">
+</p>
     + productbrands
-    ![image](https://user-images.githubusercontent.com/63864624/83353168-d9954f00-a37a-11ea-8b05-79bad43f830c.png)
+    <p align="center">
+  <img width="460" height="300" src="![image](https://user-images.githubusercontent.com/63864624/83353168-d9954f00-a37a-11ea-8b05-79bad43f830c.png)">
+</p>
     + products
-    ![image](https://user-images.githubusercontent.com/63864624/83353188-f7fb4a80-a37a-11ea-8955-fd5cedd93bf5.png)
+    <p align="center">
+  <img width="460" height="300" src="![image](https://user-images.githubusercontent.com/63864624/83353188-f7fb4a80-a37a-11ea-8955-fd5cedd93bf5.png)">
+</p>
     + cart 
-    ![image](https://user-images.githubusercontent.com/63864624/83353194-03e70c80-a37b-11ea-8e61-ca62fbdb9451.png)
-    
+    <p align="center">
+  <img width="460" height="300" src="![image](https://user-images.githubusercontent.com/63864624/83353194-03e70c80-a37b-11ea-8e61-ca62fbdb9451.png)">
+</p>
+
 ## Giao diện website
 - Giao diện trang chủ
 
