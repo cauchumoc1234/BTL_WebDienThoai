@@ -13,6 +13,19 @@
 - password : admin1
 - Link demo Heroku : https://aladin-tech.herokuapp.com/home
 
+## Công nghệ sử dụng 
+- Multi-Page Application 
+![image](https://user-images.githubusercontent.com/63864624/83350178-8a442400-a364-11ea-91fe-c4c9b2611c04.png)
+
+- NodeJS 
+![image](https://user-images.githubusercontent.com/63864624/83350182-962fe600-a364-11ea-8ec7-81ae4a7fee47.png)
+
+- MySQL
+![image](https://user-images.githubusercontent.com/63864624/83350185-a34cd500-a364-11ea-8c21-4bec26647027.png)
+
+- PUG
+![image](https://user-images.githubusercontent.com/63864624/83350192-af389700-a364-11ea-992e-5ad32f8dc16d.png)
+
 ## Chức năng
 - Có khả năng tạo tài khoản người dùng 
 - Tìm kiếm các mặt hàng đang được bán trên website 
