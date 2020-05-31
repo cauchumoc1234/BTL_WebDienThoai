@@ -30,7 +30,7 @@
 - Lưu thông tin đơn hàng tiện lợi
 
 ## Cơ sở dữ liệu
-![image](https://user-images.githubusercontent.com/63864624/83353065-1ca2f280-a37a-11ea-912c-c3e7c9a3ee1a.png)
+
 
 ## Cấu trúc thư mục và cơ sở dữ liệu
 - Thư mục
