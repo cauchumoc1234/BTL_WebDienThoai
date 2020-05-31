@@ -30,7 +30,7 @@
 - Lưu thông tin đơn hàng tiện lợi
 
 ## Cơ sở dữ liệu
-
+![image](https://user-images.githubusercontent.com/63864624/83353065-1ca2f280-a37a-11ea-912c-c3e7c9a3ee1a.png)
 
 ## Cấu trúc thư mục và cơ sở dữ liệu
 - Thư mục
@@ -47,9 +47,9 @@
     + productbrands
     ![image](https://user-images.githubusercontent.com/63864624/83353168-d9954f00-a37a-11ea-8b05-79bad43f830c.png)
     + products
-    ![image](https://user-images.githubusercontent.com/63864624/83353188-f7fb4a80-a37a-11ea-8955-fd5cedd93bf5.png)
+    ![image](https://user-images.githubusercontent.com/63864624/83353769-f9c70d00-a37e-11ea-976c-1a05609748e1.png)
     + cart 
-    ![image](https://user-images.githubusercontent.com/63864624/83353623-01d27d00-a37e-11ea-8722-4977e2e0ac82.png)
+    ![image](https://user-images.githubusercontent.com/63864624/83353188-f7fb4a80-a37a-11ea-8955-fd5cedd93bf5.png)
 ## Giao diện website
 - Giao diện trang chủ
 
