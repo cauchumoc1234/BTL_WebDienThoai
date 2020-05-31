@@ -34,39 +34,22 @@
 
 ## Cấu trúc thư mục và cơ sở dữ liệu
 - Thư mục
-<p align="center">
-  <img src="![image](https://user-images.githubusercontent.com/63864624/83353117-79061200-a37a-11ea-83ba-b96c3fdf247a.png)">
-</p>
+![image](https://user-images.githubusercontent.com/63864624/83353117-79061200-a37a-11ea-83ba-b96c3fdf247a.png)
 - Cấu trúc cơ sở dữ liệu
     + cơ sở dữ liệu
-    <p align="center">
-  <img src="![image](https://user-images.githubusercontent.com/63864624/83353135-9aff9480-a37a-11ea-965a-bb2122bb5cd4.png)">
-</p>
+   ![image](https://user-images.githubusercontent.com/63864624/83353135-9aff9480-a37a-11ea-965a-bb2122bb5cd4.png)
     + customers
-    <p align="center">
-  <img src="![image](https://user-images.githubusercontent.com/63864624/83353139-a81c8380-a37a-11ea-90c4-830c04f19b4e.png)">
-</p>
+    ![image](https://user-images.githubusercontent.com/63864624/83353139-a81c8380-a37a-11ea-90c4-830c04f19b4e.png)
     + orders 
-    <p align="center">
-  <img src="![image](https://user-images.githubusercontent.com/63864624/83353149-b7033600-a37a-11ea-8ff9-536c118e9acd.png)">
-</p>
+    ![image](https://user-images.githubusercontent.com/63864624/83353149-b7033600-a37a-11ea-8ff9-536c118e9acd.png)
     + orderdetails
-    <p align="center">
-  <img src="![image](https://user-images.githubusercontent.com/63864624/83353163-cedaba00-a37a-11ea-9843-6451fd436a07.png)">
-</p>
+    ![image](https://user-images.githubusercontent.com/63864624/83353163-cedaba00-a37a-11ea-9843-6451fd436a07.png)
     + productbrands
-    <p align="center">
-  <img src="![image](https://user-images.githubusercontent.com/63864624/83353168-d9954f00-a37a-11ea-8b05-79bad43f830c.png)">
-</p>
+    ![image](https://user-images.githubusercontent.com/63864624/83353168-d9954f00-a37a-11ea-8b05-79bad43f830c.png)
     + products
-    <p align="center">
-  <img src="![image](https://user-images.githubusercontent.com/63864624/83353188-f7fb4a80-a37a-11ea-8955-fd5cedd93bf5.png)">
-</p>
+    ![image](https://user-images.githubusercontent.com/63864624/83353188-f7fb4a80-a37a-11ea-8955-fd5cedd93bf5.png)
     + cart 
-    <p align="center">
-  <img src="![image](https://user-images.githubusercontent.com/63864624/83353194-03e70c80-a37b-11ea-8e61-ca62fbdb9451.png)">
-</p>
-
+    ![image](https://user-images.githubusercontent.com/63864624/83353194-03e70c80-a37b-11ea-8e61-ca62fbdb9451.png)
 ## Giao diện website
 - Giao diện trang chủ
 
