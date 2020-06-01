@@ -5,9 +5,11 @@ for(var i = 0;i < all_btn.length ; i++){
 }
 function addEvent(button ,id){
     button.addEventListener('click',function(){
-        console.log("clicked");
-        axios.post("/customer/cart/add/"+id).then(function(res){
-        })
+        if(document.cookie.search("customerId") >=0){
+            axios.post("/customer/cart/add/"+id).then(function(res){
+            })
+        }
+        else window.location.href ="/customer"
     })
 }
 var all_del_btn = document.getElementsByClassName("del-btn")

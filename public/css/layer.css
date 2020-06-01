@@ -33,8 +33,9 @@ html{
     
 }
 .search-box button{
-    background-color: aqua;
+    background-color: rgb(230, 91, 91);
     border: none;
+    color: white;
 }
 .search-box input{
     height: 50%;

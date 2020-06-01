@@ -96,6 +96,8 @@ module.exports.logout= function(req,res){
 module.exports.addProduct = function(req,res){
     var productId = req.params.id;
     var userId = res.locals.user.customerID
+    res.send("Hello")
+    console.log(res.locals.user);
     var sql = "SELECT * FROM `cart` WHERE `customerID` = " + userId +" AND `productID` = "+ productId;
     connection.query(sql,function(err,result){
         if(result.length > 0){
@@ -108,8 +110,6 @@ module.exports.addProduct = function(req,res){
             connection.query(sql_2 , [productId],function(err,result){
                 
                 var quantityInStock = result[0].quantityInStock;
-                console.log(quantityInStock);
-                console.log(count);
                 if(count < quantityInStock){
                     connection.query(add_sql , [count + 1 , userId , productId] , function(err,result){
                         if(err) throw err.stack
