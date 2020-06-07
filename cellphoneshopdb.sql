@@ -27,7 +27,8 @@ SET time_zone = "+00:00";
 --
 -- Cấu trúc bảng cho bảng `cart`
 --
-
+CREATE DATABASE `cellphoneshopdb`;
+USE `cellphoneshopdb`;
 CREATE TABLE `cart` (
   `customerID` int(11) NOT NULL,
   `productID` int(11) NOT NULL,

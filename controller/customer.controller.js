@@ -96,8 +96,6 @@ module.exports.logout= function(req,res){
 module.exports.addProduct = function(req,res){
     var productId = req.params.id;
     var userId = res.locals.user.customerID
-    res.send("Hello")
-    console.log(res.locals.user);
     var sql = "SELECT * FROM `cart` WHERE `customerID` = " + userId +" AND `productID` = "+ productId;
     connection.query(sql,function(err,result){
         if(result.length > 0){

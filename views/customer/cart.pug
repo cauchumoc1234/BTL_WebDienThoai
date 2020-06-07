@@ -2,7 +2,7 @@ extends ../layout
 block css
       link(rel='stylesheet', href='/css/cart.css')
 block main
-    h1.mx-auto Your Cart
+    h1.ml-5 Your Cart
     if list_item.length > 0
       table.mx-auto
         tr
@@ -21,7 +21,7 @@ block main
                     button.btn.btn-danger.del-btn Delete
       a.btn.btn-primary.float-md-left.mt-3.buy-btn(href="cart/order") Buy all
     else
-      h4.mt-4.mx-auto(style="color:gray") Your cart is empty
+      h4.mt-4.ml-5(style="color:gray") Your cart is empty
 block script
     script(src='https://unpkg.com/axios/dist/axios.min.js')
     script(src='/js/cart.js')

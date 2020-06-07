@@ -5,7 +5,7 @@ for(var i = 0;i < all_btn.length ; i++){
 }
 function addEvent(button ,id){
     button.addEventListener('click',function(){
-        if(document.cookie.search("customerId") >=0){
+        if(document.cookie.search("customerID") >=0){
             axios.post("/customer/cart/add/"+id).then(function(res){
             })
         }
