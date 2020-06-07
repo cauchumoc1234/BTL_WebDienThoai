@@ -16,7 +16,7 @@ block main
                         p RAM: #{product.productRAM} GB
                         p ROM: #{product.productROM} GB
                         p Brand: #{product.productBrand}
-                  button(name = product.productID).btn.add-to-cart.mx-auto(style="width:100%,margin-top:10px")
+                  button(name = product.productID,style="width:100%,margin-top:10px").btn.add-to-cart.mx-auto
                       i.fa.fa-cart-plus(aria-hidden='true')
 block script
     script(src='https://unpkg.com/axios/dist/axios.min.js')

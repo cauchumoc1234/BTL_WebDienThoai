@@ -150,14 +150,12 @@ module.exports.order = function(req,res){
             var total = result_2.reduce(function(t,item){
                 return t += item.total;
             },0)
-            //console.log(typeof total);
             res.render('customer/order' , {user: user , list_item : result_2,total_price:total.toFixed(2)})
         })
     })
     
 }
 module.exports.submitOrder = function(req,res){
-    //res.send("hi")
     var id = shortid.generate()
     var sql = "SELECT `customerID`, `cart`.`productID`,`amount`, `buyPrice` FROM `cart` INNER JOIN `products` ON `cart`.`productID` = `products`.`productID` WHERE `cart`.`customerID` = " + req.signedCookies.customerID;
     var now = new Date()
@@ -186,6 +184,7 @@ module.exports.submitOrder = function(req,res){
             })
         })
     })
-    res.redirect('/home')
+    //res.redirect('/home')
+    res.render('customer/success')
 
 }
