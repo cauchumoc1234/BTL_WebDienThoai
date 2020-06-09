@@ -6,19 +6,22 @@ module.exports.create = function(req,res){
     connection.query(first_check,[req.body.username],(err,result)=>{
         if(err) throw err;
         if(result.length > 0){
-            res.render('customer/customer',{
-                form_err:"Username was used"
-            })
-            return;
+            res.redirect('/customer/duplicate');
         }
-        var sql = "INSERT INTO `customers` (`customerID`, `username`, `password`, `customerName`, `phoneNumber`, `address`) VALUES (NULL, ?, ?, ?, ?, ?);"
-        connection.query(sql,[req.body.username,req.body.password,req.body.fullname,req.body.phonenumbers,req.body.address],function(err,result){
-            if(err) throw err.stack;
-            res.redirect('back');
-        })
+        else{
+            var sql = "INSERT INTO `customers` (`customerID`, `username`, `password`, `customerName`, `phoneNumber`, `address`) VALUES (NULL, ?, ?, ?, ?, ?);"
+            connection.query(sql,[req.body.username,req.body.password,req.body.fullname,req.body.phonenumbers,req.body.address],function(err,result){
+                if(err) throw err.stack;
+                res.redirect('back');
+            })
+        }
+        
     })
     
     
+}
+module.exports.alert = function(req,res){
+    res.render('customer/duplicate')
 }
 //Login
 module.exports.postLogin = function(req,res){

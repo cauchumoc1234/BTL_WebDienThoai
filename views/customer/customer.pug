@@ -7,8 +7,6 @@ block main
   .cus-form
     .register
       h1 Register
-      if form_err
-        .alert.alert-danger= form_err
       form(action='/customer/create',method="post")
         label(for='username') Username
         input#username(type='text', placeholder='Less than 20 characters',name="username", pattern='[A-Za-z0-9]{1,20}')
